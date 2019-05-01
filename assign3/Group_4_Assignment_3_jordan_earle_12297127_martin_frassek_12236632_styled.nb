@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    354929,       7234]
-NotebookOptionsPosition[    348692,       7120]
-NotebookOutlinePosition[    349049,       7136]
-CellTagsIndexPosition[    349006,       7133]
+NotebookDataLength[    364693,       7523]
+NotebookOptionsPosition[    358454,       7409]
+NotebookOutlinePosition[    358811,       7425]
+CellTagsIndexPosition[    358768,       7422]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -621,8 +621,293 @@ signal-response curve was also plotted and examined.  Then the concentrations \
 of both X and R were plotted over time (0-20) as S was increased in \
 incremental steps each 4 seconds (S = 0,1,2,3,4) and the resulting graph was \
 analysed.  \n\nNext, different feedforward and feedback control networks were \
-examined.  In the figure above, b-d, 2 types of positive feedback and one \
-negative feedback examples were supplied. "
+examined.  In the figure above, b-d, 2 types of positive feedback (mutual \
+inhibition and mutual activation) and one negative feedback examples were \
+supplied.   In the negative feedback, the response R counteracts the effects \
+of the stimulus signal S.  In mutual inhibition, the signal S enhances the \
+synthesis of the response, which in turn inhibits E, in this example by \
+phosphorylation.  In the example shown E degrades into R and therefore, E and \
+R are mutually antagonistic.  In mutual activation the signal S enhances the \
+synthesis of the response, which in turn enhances its own synthesis through \
+the phosphorylating E in this example.  \n\nIn this case of mutual \
+activation, the feedback can create a discontinuous switch, meaning the \
+cellular response changes abruptly and irreversibly as the signal magnitude \
+crosses a critical value ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "crit"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "d4faba94-6b7c-4f1e-8657-6b3adf02927d"],
+ ", where between the values of 0 and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "crit"], TraditionalForm]],ExpressionUUID->
+  "363ca376-7219-4524-b5d5-2a6c0f243827"],
+ " the system is called bistable.   In the case of mutual inhibition, the \
+feedback can create a toggle switch, where when S s decreased enough, the \
+switch will go back to the off state.  For values of S between ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["S", "crit1"], " ", "<", " ", "S", " ", "<", " ", 
+    SubscriptBox["S", "crit2"]}], TraditionalForm]],ExpressionUUID->
+  "b7bb9451-c0f4-4b1c-85c1-50b2f5a5c61c"],
+ ", the response of the system can be large or small.  In the case of the \
+negative feedback, there will be a stead state concentration of the response \
+R confined to a narrow window for a broad range of signal strengths.  \n\nThe \
+3 systems can be described by the following ODE\[CloseCurlyQuote]s.  In this \
+experiment the network will be matched to the appropriate system of ODE\
+\[CloseCurlyQuote]s.  \n\n",
+ StyleBox["Negative feedback: Homeostasis\n\n\t",
+  FontWeight->"Bold"],
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "0"], 
+      RowBox[{"E", "(", "R", ")"}]}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "S", " ", "R"}]}]}], 
+   TraditionalForm], "\[LineSeparator]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"E", "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      SubscriptBox["k", "3"], ",", 
+      RowBox[{
+       SubscriptBox["k", "4"], "R"}], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "61e474b9-c3a5-4dc2-811f-b037d61c041e"],
+ "  \twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "f49b75d1-de39-4529-ba6a-b7c59c00fdf9"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "e1046b00-1ad5-4691-9963-9082555a465f"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "d42a0e6c-a546-43e3-a64b-6007a20a6e1d"],
+ " 0.5, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "f459b601-b85f-47e3-b428-9aea1f315d8b"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "e5788b28-4fa4-4c80-8f05-316d5233100d"],
+ " 0.01. \n\nIn this system the signal will take values of S = 0.5, 1 and \
+1.5.\n",
+ StyleBox["\nPositive Feedback: Mutual inhibition\n\n\t",
+  FontWeight->"Bold"],
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     SubscriptBox["k", "0"], "+", 
+     RowBox[{
+      SubscriptBox["k", "1"], "S"}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "R"}], "-", 
+     RowBox[{
+      SubscriptBox[
+       RowBox[{"k", "'"}], "2"], 
+      RowBox[{"E", "(", "R", ")"}], " ", "R"}]}]}], 
+   TraditionalForm], "\[LineSeparator]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"E", "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      SubscriptBox["k", "3"], ",", 
+      RowBox[{
+       SubscriptBox["k", "4"], "R"}], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "9427e87f-fcd9-4da1-bebd-0c67a84ecbe2"],
+ "\t\twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "c87d9517-5eb9-4243-8351-101816ac5da2"],
+ " 0, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "1"], "="}], TraditionalForm]],ExpressionUUID->
+  "7b6341a1-664e-4197-89e2-ac0f7f3db952"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "4bce6e1c-fd6c-4af6-afa1-d1a4872099e5"],
+ " 0.05, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"k", "'"}], "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "a6b19808-7723-4e80-b3bc-ccd19b1ae3fa"],
+ " 0.5, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "528f7c1b-ee6e-45fc-b767-0ec4c9ec340b"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "311c7745-503e-45e6-926e-c5975d7b8f25"],
+ " 0.2, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "961cb15e-9b4c-46c0-9439-cd554600e8af"],
+ " 0.05.\n\t\nIn this system the signal will take values of S = 1, 1.5 and 2. \
+\n",
+ StyleBox["\nPositive Feedback Mutual activitation\n\n\t",
+  FontWeight->"Bold"],
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "0"], 
+      RowBox[{
+       SubscriptBox["E", "p"], "(", "R", ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["k", "1"], "S"}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "R"}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "p"], "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["k", "3"], "R"}], ",", 
+      SubscriptBox["k", "4"], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "b283bb2a-c5b5-4ffe-9f52-d6c67ccaf792"],
+ "\twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "494fc3db-b7cc-42ea-903b-f6059e758691"],
+ " 0.4, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "1"], "="}], TraditionalForm]],ExpressionUUID->
+  "705ffde5-36f0-417d-a521-4c38e62087ff"],
+ " 0.01, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "30ee5970-73e7-4dba-b53e-84e7e734231c"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "7c195786-004a-4e58-b056-21d8da00badb"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "e2a1115e-27c8-4866-a5d6-7356fa78fad6"],
+ " 0.2, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "bea0adb0-5614-4703-877a-f86626d33604"],
+ " 0.05.\n\t \nIn this system the signal will take values of S = 0, 8 and 16.\
+\n",
+ StyleBox["\n",
+  FontWeight->"Bold"],
+ StyleBox["G ",
+  FontSlant->"Italic"],
+ "in the above equations",
+ StyleBox[" ",
+  FontSlant->"Italic"],
+ "refers to the ",
+ ButtonBox["Goldbeter-Koshland",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://www.wikiwand.com/en/Goldbeter%E2%80%93Koshland_kinetics"], 
+    None},
+  ButtonNote->
+   "http://www.wikiwand.com/en/Goldbeter%E2%80%93Koshland_kinetics"],
+ " function and is defined as: \n\t",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"G", "(", 
+     RowBox[{"u", ",", "v", ",", "J", ",", "K"}], ")"}], "=", 
+    FractionBox[
+     RowBox[{"2", "u", " ", "K"}], 
+     RowBox[{"v", "-", "u", "+", 
+      RowBox[{"v", " ", "J"}], "+", 
+      RowBox[{"u", " ", "K"}], "+", 
+      SqrtBox[
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"v", " ", "-", " ", "u", " ", "+", " ", 
+           RowBox[{"v", " ", "J"}], " ", "+", " ", 
+           RowBox[{"u", " ", "K"}]}], ")"}], "2"], "-", " ", 
+        RowBox[{"4", 
+         RowBox[{"(", 
+          RowBox[{"v", "-", "u"}], ")"}], "u", " ", "K"}]}]]}]]}], 
+   TraditionalForm]],ExpressionUUID->"5cf2682c-e1d7-456e-8aee-0e86ed1e486b"],
+ "\n\nFrom the characteristics described thus-far it may be possible to \
+determine the type of feedback for the networks shown above.  Though in order \
+to determine them analytically,  the rates as a function of the response for \
+given values of the signal and the response as a function of the signal will \
+be analysed in order to correctly classify the systems and discuss how the \
+systems react to the signal."
 }], "Text",
  CellChangeTimes->{{3.765606010674778*^9, 3.7656060136864767`*^9}, {
    3.7657251566304827`*^9, 3.7657251754769917`*^9}, {3.765725368969988*^9, 
@@ -637,7 +922,11 @@ negative feedback examples were supplied. "
    3.765728762088709*^9, 3.7657288108289127`*^9}, {3.765729163732638*^9, 
    3.765729395063799*^9}, {3.76572947027512*^9, 3.765729572890875*^9}, {
    3.765729648708211*^9, 3.765729768534741*^9}, {3.765730400148731*^9, 
-   3.7657305155121307`*^9}},ExpressionUUID->"9b5e775e-db0f-490e-bc82-\
+   3.7657305155121307`*^9}, {3.7657315052865562`*^9, 3.76573166390282*^9}, {
+   3.765731738511613*^9, 3.765732135522575*^9}, {3.765732175144167*^9, 
+   3.7657321830538187`*^9}, {3.765732278144466*^9, 3.76573250991796*^9}, {
+   3.765732549958712*^9, 3.765732598785776*^9}, {3.765732699769623*^9, 
+   3.7657327702115583`*^9}},ExpressionUUID->"9b5e775e-db0f-490e-bc82-\
 03a00775b8e2"]
 }, Open  ]],
 
@@ -7147,91 +7436,91 @@ Cell[CellGroupData[{
 Cell[4910, 103, 322, 6, 68, "Section",ExpressionUUID->"ddea0a4f-2433-45b2-980a-c0defec53bde"],
 Cell[CellGroupData[{
 Cell[5257, 113, 171, 3, 55, "Subsection",ExpressionUUID->"54958ad4-4262-4a2d-bad9-43afbc6f81bd"],
-Cell[5431, 118, 26454, 522, 981, "Text",ExpressionUUID->"9b5e775e-db0f-490e-bc82-03a00775b8e2"]
+Cell[5431, 118, 36216, 811, 2037, "Text",ExpressionUUID->"9b5e775e-db0f-490e-bc82-03a00775b8e2"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[31922, 645, 172, 3, 55, "Subsection",ExpressionUUID->"ca9885c6-520c-4385-80a1-6eeb52d77314"],
+Cell[41684, 934, 172, 3, 55, "Subsection",ExpressionUUID->"ca9885c6-520c-4385-80a1-6eeb52d77314"],
 Cell[CellGroupData[{
-Cell[32119, 652, 250, 4, 45, "Subsubsection",ExpressionUUID->"1a0244cf-600e-49e2-9fdc-bb46fa704656"],
-Cell[32372, 658, 142, 3, 35, "Text",ExpressionUUID->"0290ddf1-840e-4083-9a02-91877292e62e"],
+Cell[41881, 941, 250, 4, 45, "Subsubsection",ExpressionUUID->"1a0244cf-600e-49e2-9fdc-bb46fa704656"],
+Cell[42134, 947, 142, 3, 35, "Text",ExpressionUUID->"0290ddf1-840e-4083-9a02-91877292e62e"],
 Cell[CellGroupData[{
-Cell[32539, 665, 4317, 117, 494, "Code",ExpressionUUID->"e521d874-37ba-4fd0-9dff-9fcae6393c25"],
-Cell[36859, 784, 33839, 683, 289, "Output",ExpressionUUID->"b5256adc-f8bb-4a87-9133-0d1954c88a93"],
-Cell[70701, 1469, 9081, 185, 280, "Output",ExpressionUUID->"b28ea38d-f4e4-4714-90b8-896dc952f1ac"]
+Cell[42301, 954, 4317, 117, 494, "Code",ExpressionUUID->"e521d874-37ba-4fd0-9dff-9fcae6393c25"],
+Cell[46621, 1073, 33839, 683, 289, "Output",ExpressionUUID->"b5256adc-f8bb-4a87-9133-0d1954c88a93"],
+Cell[80463, 1758, 9081, 185, 280, "Output",ExpressionUUID->"b28ea38d-f4e4-4714-90b8-896dc952f1ac"]
 }, Open  ]],
-Cell[79797, 1657, 266, 6, 35, "Text",ExpressionUUID->"ee982a9c-50d5-469f-b6f0-0939ecf76218"]
+Cell[89559, 1946, 266, 6, 35, "Text",ExpressionUUID->"ee982a9c-50d5-469f-b6f0-0939ecf76218"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[80100, 1668, 206, 4, 45, "Subsubsection",ExpressionUUID->"79ddca76-2514-4230-aa8e-749d8e97774c"],
+Cell[89862, 1957, 206, 4, 45, "Subsubsection",ExpressionUUID->"79ddca76-2514-4230-aa8e-749d8e97774c"],
 Cell[CellGroupData[{
-Cell[80331, 1676, 2904, 79, 230, "Code",ExpressionUUID->"6b366a47-1c47-418e-b064-de7a26df6851",
+Cell[90093, 1965, 2904, 79, 230, "Code",ExpressionUUID->"6b366a47-1c47-418e-b064-de7a26df6851",
  InitializationCell->True],
-Cell[83238, 1757, 45899, 832, 289, "Output",ExpressionUUID->"b8a5cf9f-a82a-4b5c-9bc3-01e3224e14d7"]
+Cell[93000, 2046, 45899, 832, 289, "Output",ExpressionUUID->"b8a5cf9f-a82a-4b5c-9bc3-01e3224e14d7"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[129186, 2595, 153, 3, 45, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
-Cell[129342, 2600, 161, 3, 35, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
+Cell[138948, 2884, 153, 3, 45, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
+Cell[139104, 2889, 161, 3, 35, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
 Cell[CellGroupData[{
-Cell[129528, 2607, 7318, 188, 862, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
-Cell[136849, 2797, 34590, 663, 283, "Output",ExpressionUUID->"753d0583-ac5f-446c-802f-b2bfbabea0a7"],
-Cell[171442, 3462, 2711, 52, 370, "Output",ExpressionUUID->"761e4abf-e1fa-4de0-93db-8822510bcd88"],
-Cell[174156, 3516, 1287, 30, 64, "Output",ExpressionUUID->"c3be6319-3094-448c-a4b8-739a50b4175b"],
-Cell[175446, 3548, 2660, 52, 370, "Output",ExpressionUUID->"4e92be24-45ff-4c2a-8d7e-e6f62c22508a"]
+Cell[139290, 2896, 7318, 188, 862, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
+Cell[146611, 3086, 34590, 663, 283, "Output",ExpressionUUID->"753d0583-ac5f-446c-802f-b2bfbabea0a7"],
+Cell[181204, 3751, 2711, 52, 370, "Output",ExpressionUUID->"761e4abf-e1fa-4de0-93db-8822510bcd88"],
+Cell[183918, 3805, 1287, 30, 64, "Output",ExpressionUUID->"c3be6319-3094-448c-a4b8-739a50b4175b"],
+Cell[185208, 3837, 2660, 52, 370, "Output",ExpressionUUID->"4e92be24-45ff-4c2a-8d7e-e6f62c22508a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[178143, 3605, 1796, 43, 164, "Code",ExpressionUUID->"f73734e7-02ca-4daa-b95b-82b79f7ae49f"],
-Cell[179942, 3650, 14367, 275, 283, "Output",ExpressionUUID->"3211b0b5-6b42-4b7d-97ad-346737f47abd"]
+Cell[187905, 3894, 1796, 43, 164, "Code",ExpressionUUID->"f73734e7-02ca-4daa-b95b-82b79f7ae49f"],
+Cell[189704, 3939, 14367, 275, 283, "Output",ExpressionUUID->"3211b0b5-6b42-4b7d-97ad-346737f47abd"]
 }, Open  ]],
-Cell[194324, 3928, 180, 3, 35, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
+Cell[204086, 4217, 180, 3, 35, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
 Cell[CellGroupData[{
-Cell[194529, 3935, 3091, 79, 384, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
-Cell[197623, 4016, 511, 7, 35, "Output",ExpressionUUID->"270d24ef-4e53-4e6c-ba5c-cb531e29580b"],
-Cell[198137, 4025, 29003, 566, 283, "Output",ExpressionUUID->"4fc27457-997d-41d1-bb7d-49a0e9674ef0"]
+Cell[204291, 4224, 3091, 79, 384, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
+Cell[207385, 4305, 511, 7, 35, "Output",ExpressionUUID->"270d24ef-4e53-4e6c-ba5c-cb531e29580b"],
+Cell[207899, 4314, 29003, 566, 283, "Output",ExpressionUUID->"4fc27457-997d-41d1-bb7d-49a0e9674ef0"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[227177, 4596, 2044, 52, 142, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
-Cell[229224, 4650, 19444, 384, 283, "Output",ExpressionUUID->"8d247e93-63fa-41d3-bb98-5a0bcdeeb107"]
+Cell[236939, 4885, 2044, 52, 142, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
+Cell[238986, 4939, 19444, 384, 283, "Output",ExpressionUUID->"8d247e93-63fa-41d3-bb98-5a0bcdeeb107"]
 }, Open  ]],
-Cell[248683, 5037, 180, 3, 35, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
+Cell[258445, 5326, 180, 3, 35, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
 Cell[CellGroupData[{
-Cell[248888, 5044, 2674, 69, 340, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
+Cell[258650, 5333, 2674, 69, 340, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
  InitializationCell->True],
-Cell[251565, 5115, 40331, 751, 283, "Output",ExpressionUUID->"e97e0a34-07a1-4640-93f5-c0481f91ad61"]
+Cell[261327, 5404, 40331, 751, 283, "Output",ExpressionUUID->"e97e0a34-07a1-4640-93f5-c0481f91ad61"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[291933, 5871, 1923, 50, 142, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
-Cell[293859, 5923, 15502, 318, 281, "Output",ExpressionUUID->"02520607-119b-4ddc-bf68-d5895b2fe57c"]
+Cell[301695, 6160, 1923, 50, 142, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
+Cell[303621, 6212, 15502, 318, 281, "Output",ExpressionUUID->"02520607-119b-4ddc-bf68-d5895b2fe57c"]
 }, Open  ]],
-Cell[309376, 6244, 411, 9, 81, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
+Cell[319138, 6533, 411, 9, 81, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[309848, 6260, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
+Cell[319610, 6549, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
 Cell[CellGroupData[{
-Cell[310028, 6267, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
-Cell[310202, 6272, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
+Cell[319790, 6556, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
+Cell[319964, 6561, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
 }, Open  ]],
-Cell[310376, 6278, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[310585, 6286, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
-Cell[CellGroupData[{
-Cell[310767, 6293, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
-Cell[310941, 6298, 159, 3, 35, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
+Cell[320138, 6567, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[311137, 6306, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
-Cell[311312, 6311, 22224, 402, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[320347, 6575, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
 Cell[CellGroupData[{
-Cell[333561, 6717, 7026, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
-Cell[340590, 6913, 1897, 52, 192, "Output",ExpressionUUID->"283a3d1f-8751-4641-ab9f-dbf2af046b52"]
+Cell[320529, 6582, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
+Cell[320703, 6587, 159, 3, 35, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
 }, Open  ]],
-Cell[342502, 6968, 176, 3, 35, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
 Cell[CellGroupData[{
-Cell[342703, 6975, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
-Cell[343670, 6995, 4970, 119, 156, "Output",ExpressionUUID->"7263f062-8437-48a7-94f5-26e79ce7cde7"]
+Cell[320899, 6595, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
+Cell[321074, 6600, 22224, 402, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[CellGroupData[{
+Cell[343323, 7006, 7026, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
+Cell[350352, 7202, 1897, 52, 192, "Output",ExpressionUUID->"283a3d1f-8751-4641-ab9f-dbf2af046b52"]
+}, Open  ]],
+Cell[352264, 7257, 176, 3, 35, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
+Cell[CellGroupData[{
+Cell[352465, 7264, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
+Cell[353432, 7284, 4970, 119, 156, "Output",ExpressionUUID->"7263f062-8437-48a7-94f5-26e79ce7cde7"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
