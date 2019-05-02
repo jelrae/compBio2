@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    410937,       8589]
-NotebookOptionsPosition[    403888,       8467]
-NotebookOutlinePosition[    404245,       8483]
-CellTagsIndexPosition[    404202,       8480]
+NotebookDataLength[    410805,       8585]
+NotebookOptionsPosition[    403756,       8463]
+NotebookOutlinePosition[    404113,       8479]
+CellTagsIndexPosition[    404070,       8476]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -7491,22 +7491,19 @@ that ",
  "is independent of S.  From the equation it can also be seen that ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["v", "-"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["v", "-"], TraditionalForm]],ExpressionUUID->
   "cf36b2a8-29e9-4e52-8ede-821a5332c825"],
  " is dependent on ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["E", "p"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["E", "p"], TraditionalForm]],ExpressionUUID->
   "b99f5ce2-6320-474a-b553-4b3b98d2dddc"],
  ", which only occurs in network (b).    Therefor it can be concluded that \
 network (b) is mutual activation.   Upon examining the network diagram it can \
 also be seen that both S and ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["E", "P"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["E", "P"], TraditionalForm]],ExpressionUUID->
   "a31444ba-04f5-4617-b7e5-fba6aaaaa7ec"],
  " are stimulating the synthesis which is again indicative of mutual \
 activation.\n\nFrom the interactive graph 2 and 3, it can be seen that the \
@@ -7514,8 +7511,7 @@ critical value of S ",
  Cell[BoxData[
   FormBox[
    RowBox[{"(", 
-    SubscriptBox["S", "crit"]}], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+    SubscriptBox["S", "crit"]}], TraditionalForm]],ExpressionUUID->
   "db39372c-8631-479a-81f3-d9ee8960c9b5"],
  ") is around 10-12.  Before this point the system is bistable, and can be \
 reversed.  From the signal response curve it can be seen that it is \
@@ -8549,7 +8545,7 @@ Cell[286283, 5984, 2421, 77, 143, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e
 Cell[CellGroupData[{
 Cell[288729, 6065, 6129, 162, 714, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
  InitializationCell->True],
-Cell[294861, 6229, 40543, 756, 316, "Output",ExpressionUUID->"ab10e73d-b845-4274-9fd1-5183c7a7243c"],
+Cell[294861, 6229, 40543, 756, 308, "Output",ExpressionUUID->"ab10e73d-b845-4274-9fd1-5183c7a7243c"],
 Cell[335407, 6987, 2646, 53, 430, "Output",ExpressionUUID->"8b9bde26-c117-4e98-beee-2839d160431e"],
 Cell[338056, 7042, 2407, 49, 424, "Output",ExpressionUUID->"e293ca2e-9793-4de7-9a76-edc8efbefa1c"]
 }, Open  ]],
@@ -8557,37 +8553,37 @@ Cell[CellGroupData[{
 Cell[340500, 7096, 2238, 59, 164, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
 Cell[342741, 7157, 15673, 322, 314, "Output",ExpressionUUID->"f40f9d80-fb40-429e-a4e2-4f0ccd196884"]
 }, Open  ]],
-Cell[358429, 7482, 2940, 59, 290, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
+Cell[358429, 7482, 2808, 55, 290, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[361430, 7548, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
+Cell[361298, 7544, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
 Cell[CellGroupData[{
-Cell[361610, 7555, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
-Cell[361784, 7560, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
+Cell[361478, 7551, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
+Cell[361652, 7556, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
 }, Open  ]],
-Cell[361958, 7566, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[362167, 7574, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
-Cell[CellGroupData[{
-Cell[362349, 7581, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
-Cell[362523, 7586, 1483, 21, 242, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
+Cell[361826, 7562, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[364043, 7612, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
-Cell[364218, 7617, 22410, 405, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[362035, 7570, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
 Cell[CellGroupData[{
-Cell[386653, 8026, 7027, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
-Cell[393683, 8222, 1926, 53, 192, "Output",ExpressionUUID->"c97d0289-f281-4f5d-ae9a-52167f7da54b"]
+Cell[362217, 7577, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
+Cell[362391, 7582, 1483, 21, 242, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
 }, Open  ]],
-Cell[395624, 8278, 683, 12, 81, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
 Cell[CellGroupData[{
-Cell[396332, 8294, 968, 19, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
-Cell[397303, 8315, 4996, 120, 156, "Output",ExpressionUUID->"8a0983dd-d052-42a0-841e-c7d260f5a511"]
+Cell[363911, 7608, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
+Cell[364086, 7613, 22410, 405, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[CellGroupData[{
+Cell[386521, 8022, 7027, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
+Cell[393551, 8218, 1926, 53, 192, "Output",ExpressionUUID->"c97d0289-f281-4f5d-ae9a-52167f7da54b"]
 }, Open  ]],
-Cell[402314, 8438, 1534, 24, 265, "Text",ExpressionUUID->"76e8b0dd-2650-495d-a1f6-76268e3d8817"]
+Cell[395492, 8274, 683, 12, 81, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
+Cell[CellGroupData[{
+Cell[396200, 8290, 968, 19, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
+Cell[397171, 8311, 4996, 120, 156, "Output",ExpressionUUID->"8a0983dd-d052-42a0-841e-c7d260f5a511"]
+}, Open  ]],
+Cell[402182, 8434, 1534, 24, 265, "Text",ExpressionUUID->"76e8b0dd-2650-495d-a1f6-76268e3d8817"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
