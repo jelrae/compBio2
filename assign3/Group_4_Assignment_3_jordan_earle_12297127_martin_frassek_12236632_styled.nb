@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    388974,       8117]
-NotebookOptionsPosition[    382235,       7998]
-NotebookOutlinePosition[    382592,       8014]
-CellTagsIndexPosition[    382549,       8011]
+NotebookDataLength[    401102,       8386]
+NotebookOptionsPosition[    394161,       8265]
+NotebookOutlinePosition[    394518,       8281]
+CellTagsIndexPosition[    394475,       8278]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2982,14 +2982,16 @@ As the signal is increased, the perturbation from the steady state lessens as \
  "  Also as from the previous part, we found that X = S at steady state, as \
 it can be observed in the graph that as S is stepped up, X reacts and once \
 again approaches the steady state of X = S ",
- StyleBox["MARTING WHY IS THIS?",
+ StyleBox["MARTIN WHY IS THIS?",
   FontWeight->"Bold"],
  ".  "
 }], "Text",
  CellChangeTimes->{{3.7657359289266787`*^9, 3.7657359938213253`*^9}, {
    3.765736079904709*^9, 3.765736171873308*^9}, 3.765766900230937*^9, {
    3.765768343382738*^9, 3.7657684130190983`*^9}, {3.7657685120128307`*^9, 
-   3.7657685157584667`*^9}},ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-\
+   3.7657685157584667`*^9}, {3.765775486520484*^9, 3.765775490363102*^9}, {
+   3.765784462587462*^9, 
+   3.765784462741006*^9}},ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-\
 f03599f890bd"]
 }, Open  ]],
 
@@ -3000,16 +3002,76 @@ Cell["B1", "Subsubsection",
   3.765606563966251*^9}},ExpressionUUID->"ed299abd-744b-4c51-b321-\
 21884235dc22"],
 
-Cell["\<\
-In this part of the experiment, 3 systems of ODE\[CloseCurlyQuote]s were  \
-matched to the corresponding signal response network.  The networks and \
-equations are shown in the introduction.  The ODE system which was examined \
-was the negative feedback network.  The graph of the rate and signal-response \
-curve can be seen in the following figures.\
-\>", "Text",
+Cell[TextData[{
+ "In this part of the experiment, 3 ODE\[CloseCurlyQuote]s describing the \
+reactant (R) were matched to the corresponding signal response network.  The \
+networks and equations are shown in the introduction.  The first of the ODE\
+\[CloseCurlyQuote]s which were graphed was the negative feedback homeostasis \
+network.  The graph of the rate and signal-response curve can be seen in the \
+following figures base off the following ODE.\n\n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "0"], 
+      RowBox[{"E", "(", "R", ")"}]}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "S", " ", "R"}]}]}], 
+   TraditionalForm], "\[LineSeparator]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"E", "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      SubscriptBox["k", "3"], ",", 
+      RowBox[{
+       SubscriptBox["k", "4"], "R"}], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "f2101145-7b98-4138-b47f-06c159bd5e93"],
+ "  \twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "37cacc4f-a9ea-4882-a4be-07ac336bafcd"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "0692a01b-a198-425f-bef6-8d379550bf06"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "301852b1-5a92-4d48-9610-b552b6b3acce"],
+ " 0.5, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "dc4805c1-9708-4fed-a27d-2921febadef0"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "be91f0cb-4a14-46ef-92bb-246c56d16a63"],
+ " 0.01. "
+}], "Text",
  CellChangeTimes->{{3.7656069238219347`*^9, 3.765606926443348*^9}, {
   3.765768530586585*^9, 3.765768731660966*^9}, {3.765768867683177*^9, 
-  3.7657688939251757`*^9}},ExpressionUUID->"a9e35c1c-3234-4774-ab83-\
+  3.7657688939251757`*^9}, {3.765784375746005*^9, 3.7657844016990833`*^9}, {
+  3.765784500756488*^9, 3.765784526746277*^9}, {3.765787312742404*^9, 
+  3.7657873249200907`*^9}},ExpressionUUID->"a9e35c1c-3234-4774-ab83-\
 577bec1073c1"],
 
 Cell[CellGroupData[{
@@ -3130,8 +3192,8 @@ Cell[BoxData[{
       RowBox[{"PlotLabel", "\[Rule]", 
        RowBox[{"Style", "[", 
         RowBox[{
-        "\"\<Interactive Rate Curve: \\n Negative Feedback Homeostasis\>\"", 
-         ",", " ", 
+        "\"\<Interactive Rate Curve Variable S: \\n Negative Feedback \
+Homeostasis\>\"", ",", " ", 
          RowBox[{"FontSize", "\[Rule]", "18"}]}], "]"}]}], ",", 
       RowBox[{"PlotRange", "\[Rule]", 
        RowBox[{"{", 
@@ -3190,7 +3252,9 @@ Point(s)\>\"", ",", " ",
         RowBox[{"{", 
          RowBox[{"0", ",", "1"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "1.5"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"-", "1.5"}], ",", "1.5"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+   
    RowBox[{"{", 
     RowBox[{"O", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "Code",
  CellChangeTimes->{{3.765606655410307*^9, 3.765606801356588*^9}, {
@@ -3210,9 +3274,10 @@ Point(s)\>\"", ",", " ",
    3.765695982780138*^9}, {3.765696076622305*^9, 3.765696090165023*^9}, 
    3.76576891822301*^9, {3.765769984291871*^9, 3.765770039918976*^9}, {
    3.765770398492406*^9, 3.7657704130067883`*^9}, {3.765770493283894*^9, 
-   3.7657706158439198`*^9}},
+   3.7657706158439198`*^9}, {3.765787792672455*^9, 3.765787793105249*^9}, {
+   3.765788791234206*^9, 3.765788792618731*^9}},
  CellLabel->
-  "In[268]:=",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
+  "In[397]:=",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{{{}, {}, 
@@ -3351,7 +3416,7 @@ pG7NO0IjUGI3e/HMIRKK7zR+8Rki8LNV6u7mbSREbdkdajxKYInkjFnKZhJc
 WLFn1hEEnO6dd1mjQoLKCUd6+U8CDpl0k5XrSFgg3J4SNkWgwuvTqsjVJDDy
 DzjY/CawJsRXXkqOhBKH5G3bZwls8/czjVhJwvO1YhP//29v5LmhRlqKhP8B
 MYg6nw==
-          "]]}, Annotation[#, "Charting`Private`Tag$44142#1"]& ], 
+          "]]}, Annotation[#, "Charting`Private`Tag$113516#1"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -3377,7 +3442,7 @@ gpTatHcvSi7gWZb0lcYguYCtO//0HJPkAn8cnfrI1Cu5gHbdjqUVVskF4n9+
 Rb/RLrnA1a9v3lCNSC5QuPK1/ES35AJ7HSXJSim5wMubPxNN9yUX8PU2VxZM
 SS4wVLcuO+Oh5AKG7IpVq/+VXOCHUP9Jj0dygccrc3Vz
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$44142#2"]& ], 
+        Annotation[#, "Charting`Private`Tag$113516#2"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -3400,7 +3465,7 @@ tA1jj79BPXrrxMPd4rfoycXZ0XoOuiiiNfpCC1rnQL3HFKAlI6wKfRH6Q7b2
 mmgczfaKta+dQAe+PsI7L0V/uj/wlT6PLnY+xgpRo1PlZWGUZfThoFuyrjU0
 AT9WV6RFT/O9aHGbaAGt1sX1D/qFtZFGp0P/BaO4ekM=
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$44142#3"]& ], 
+        Annotation[#, "Charting`Private`Tag$113516#3"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -3436,7 +3501,7 @@ L3goKFhL9lquGyY4JMneaURRaCv6Tek7QmC2NVJcNUrB0P7irVRCQFdpvZFK
 KNTQ8o7dmSDoLlvDDpqkEFF/x73+O0EF+7qV9RQFzdSni6VTBH8snDmmVFJ4
 4FNPlEqCfwFG+Xar
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$44142#4"]& ]}}, {}, {}}, {
+        Annotation[#, "Charting`Private`Tag$113516#4"]& ]}}, {}, {}}, {
     DisplayFunction -> Identity, Ticks -> {Automatic, Automatic}, 
      AxesOrigin -> {0, 0}, FrameTicks -> {{Automatic, 
         Charting`ScaledFrameTicks[{Identity, Identity}]}, {Automatic, 
@@ -3880,24 +3945,24 @@ KNTQ8o7dmSDoLlvDDpqkEFF/x73+O0EF+7qV9RQFzdSni6VTBH8snDmmVFJ4
    3.7656961057666597`*^9, 3.765715312631682*^9, 3.765715386520546*^9, 
    3.7657206093128757`*^9, 3.765768918720162*^9, 3.765769943795826*^9, {
    3.765770522410243*^9, 3.7657705443373203`*^9}, 3.765770576937358*^9, 
-   3.765770619597567*^9},
+   3.765770619597567*^9, 3.765787891234709*^9, 3.76578879333328*^9},
  CellLabel->
-  "Out[272]=",ExpressionUUID->"829864a5-e4e2-4b9e-b3a5-6e6b35a00b08"],
+  "Out[401]=",ExpressionUUID->"d527627a-7445-436a-8f48-3dbc9273f91f"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`S$$ = 1.4000000000000001`, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`S$$ = 1.36, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`S$$], 0, 10}}, Typeset`size$$ = {421., {145., 150.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`S$44222$$ = 0}, 
+    True, $CellContext`S$113596$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`S$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`S$$, $CellContext`S$44222$$, 0]}, 
+        Hold[$CellContext`S$$, $CellContext`S$113596$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3910,8 +3975,8 @@ Cell[BoxData[
 $CellContext`rateconstb], $CellContext`R $CellContext`S$$}], {$CellContext`R, 
          0, 1}, Frame -> True, FrameLabel -> {"R", "Rates"}, 
         PlotLegends -> {"v1", "v2"}, PlotLabel -> 
-        Style["Interactive Rate Curve: \n Negative Feedback Homeostasis", 
-          FontSize -> 18], PlotRange -> {{0, 1}, {0, 1.5}}], 
+        Style["Interactive Rate Curve Variable S: \n Negative Feedback \
+Homeostasis", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1.5}}], 
       "Specifications" :> {{$CellContext`S$$, 0, 10}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
      ImageSizeCache->{468., {189., 196.}},
@@ -3937,23 +4002,23 @@ $CellContext`rateconstb], $CellContext`R $CellContext`S$$}], {$CellContext`R,
    3.7656961057666597`*^9, 3.765715312631682*^9, 3.765715386520546*^9, 
    3.7657206093128757`*^9, 3.765768918720162*^9, 3.765769943795826*^9, {
    3.765770522410243*^9, 3.7657705443373203`*^9}, 3.765770576937358*^9, 
-   3.7657706198516808`*^9},
+   3.765770619597567*^9, 3.765787891234709*^9, 3.765788793561722*^9},
  CellLabel->
-  "Out[273]=",ExpressionUUID->"540f9407-1dc3-4a8f-8e24-a70b1b1ae13d"],
+  "Out[402]=",ExpressionUUID->"0db2cfba-1e05-4254-b1ae-82d8c98ba3cd"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{O$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{O$$ = 0.9, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[O$$], 0, 10}}, Typeset`size$$ = {360., {145., 150.}}, 
+      Hold[O$$], 0, 10}}, Typeset`size$$ = {360., {144., 150.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    O$44246$$ = 0}, 
+    O$113620$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {O$$ = 0}, "ControllerVariables" :> {
-        Hold[O$$, O$44246$$, 0]}, 
+        Hold[O$$, O$113620$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3968,10 +4033,10 @@ $CellContext`ratesb], $CellContext`rateconstb], $CellContext`S ->
            O$$]}], {$CellContext`R, 0, 1}, Frame -> True, 
         FrameLabel -> {"R", "R'"}, PlotLabel -> 
         Style["Interactive R v.s. R' with Variable S \n Showing the \
-Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1.5}}], 
+Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {-1.5, 1.5}}], 
       "Specifications" :> {{O$$, 0, 10}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {189., 196.}},
+     ImageSizeCache->{407., {188., 195.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3994,9 +4059,9 @@ Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1.5}}],
    3.7656961057666597`*^9, 3.765715312631682*^9, 3.765715386520546*^9, 
    3.7657206093128757`*^9, 3.765768918720162*^9, 3.765769943795826*^9, {
    3.765770522410243*^9, 3.7657705443373203`*^9}, 3.765770576937358*^9, 
-   3.7657706199675283`*^9},
+   3.765770619597567*^9, 3.765787891234709*^9, 3.765788793672435*^9},
  CellLabel->
-  "Out[275]=",ExpressionUUID->"eccf3c64-d268-4c74-8a3f-6ccb6e513a63"]
+  "Out[404]=",ExpressionUUID->"3b272e12-8f87-44ef-8cbf-68c004755224"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4373,9 +4438,147 @@ faXW2puKsJT3TyYnKcTCG4X8I9epiPERsM+e4uarxqZku1PxycRWy3uG6++B
   "Out[281]=",ExpressionUUID->"8ff00701-14e7-40a1-a8b7-6b6327bdde2e"]
 }, Open  ]],
 
-Cell["Positive feedback: Mutual Inhibition", "Text",
- CellChangeTimes->{{3.765614380035067*^9, 
-  3.7656143940999107`*^9}},ExpressionUUID->"ff10a64e-58e5-4702-ac10-\
+Cell[TextData[{
+ "In the first graph, the rates for a given response due to the signal \
+strengths requested in the experiment were shown.  From this, and the ODE, it \
+can be seen that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "fe5fd73d-5531-4694-8e0f-2e676f85f4f1"],
+ "is independent of S.  From this information alone it can be determined that \
+this therefor corresponds to network d from the figure as it is the only \
+network for which ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "1"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "543436e8-dde0-43ae-aa97-e921214ade17"],
+ " is independent of the signal.  The second graph, the concentration of S is \
+varied dynamically and the resulting steady states can be observed.  In this \
+case it can be seen that there is only one steady state whose position \
+changes with the concentration of S.  \n\nIn graph 3 the R v.s. R\
+\[CloseCurlyQuote] plot shows where the steady state of the system is, and \
+can show if its stable.  Looking at the intersection with the X-axis (R), if \
+can be seen where the steady state is, and the value of R\[CloseCurlyQuote] \
+on either side of that shows if R is increasing or decreasing at either side. \
+ In this case there is only one steady state at any given time, and this can \
+be seen as well in the signal response curve.  Observing the R v.s. R\
+\[CloseCurlyQuote] plot, it can be see that R is increasing to the left of \
+the steady state, going towards the steady state, and decressing on the \
+right, once again going towards the steady state. \n\nIt can be seen from \
+both graphs that there is an area where the response is confined to a narrow \
+window, meaning that it does not change much with the change of the signal.  \
+This can again be observed in the R v.s. R\[CloseCurlyQuote] plot and in the \
+signal response curve.  This area is from around S = 0.5 to S = 2.  This is \
+because the signal attempts to regulate the level of the response to this \
+approximate area, to keep it in homeostasis.  Homeostasis is brought about by \
+a natural resistance to change in the optimal conditions, indicating that a \
+response of approximately 0.5 is optimum.  An example of this is the control \
+of bile acids in the liver.  In this figure it can be seen that at low values \
+of S, the response is high, as it is not maintaing the stasis, but decreasing \
+rapidly as S increases slightly and the system is pulled towards statis. As S \
+increases between the ~0.3 - ~2 range, the response remains stable around \
+0.5.  This is indicative of the homeostasis area.  Past this point it appears \
+that the system is no longer able to maintain the homeostasis.  "
+}], "Text",
+ CellChangeTimes->{{3.765784568900885*^9, 3.765784732166378*^9}, {
+  3.765784882595276*^9, 3.765784909871543*^9}, {3.7657855495445642`*^9, 
+  3.76578563367458*^9}, {3.7657856736794863`*^9, 3.7657857906717587`*^9}, {
+  3.765786499078434*^9, 3.7657865871352262`*^9}, {3.765786653749596*^9, 
+  3.765786681327018*^9}, {3.765787006157258*^9, 3.7657871108381777`*^9}, {
+  3.765787143234063*^9, 3.765787143728455*^9}, {3.765787236974525*^9, 
+  3.765787252791638*^9}, {3.765787412102263*^9, 3.765787417793398*^9}, {
+  3.765788986021105*^9, 3.765789071221283*^9}, {3.76579162372556*^9, 
+  3.7657918112606583`*^9}, {3.765792909688801*^9, 3.765792971458379*^9}, {
+  3.765793023010991*^9, 3.765793084445794*^9}, {3.765793167580318*^9, 
+  3.765793173971652*^9}},ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-\
+b20485fe2036"],
+
+Cell[TextData[{
+ "The next of the ODE\[CloseCurlyQuote]s which was examined was that of the \
+positive feedback mutual inhibition.  The graph of the rate and \
+signal-response curve can be seen in the following figures based off the \
+following ODE.\n\n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     SubscriptBox["k", "0"], "+", 
+     RowBox[{
+      SubscriptBox["k", "1"], "S"}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "R"}], "-", 
+     RowBox[{
+      SubscriptBox[
+       RowBox[{"k", "'"}], "2"], 
+      RowBox[{"E", "(", "R", ")"}], " ", "R"}]}]}], 
+   TraditionalForm], "\[LineSeparator]", 
+  FormBox[
+   RowBox[{
+    RowBox[{"E", "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      SubscriptBox["k", "3"], ",", 
+      RowBox[{
+       SubscriptBox["k", "4"], "R"}], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "ab78085a-8dbc-4341-a7da-9b4363f61190"],
+ "\t\twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "07af6f46-ce06-404a-960c-d3da9c2fc966"],
+ " 0, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "1"], "="}], TraditionalForm]],ExpressionUUID->
+  "cd68026c-e382-414d-a0a2-21205f1928a9"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "6f8ea4f9-5d12-4067-91e5-8a1f5d6bf7f3"],
+ " 0.05, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox[
+     RowBox[{"k", "'"}], "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "e2b1728c-e3a4-475b-b979-7d9dde4622d4"],
+ " 0.5, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "d53353a8-4d95-4fbe-ba00-5c3b83c15bff"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "c93cdb6d-f917-4b0e-bd0f-1ebf9b96df46"],
+ " 0.2, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "35a0485a-544b-4a6e-b14a-5d563f7b1a35"],
+ " 0.05."
+}], "Text",
+ CellChangeTimes->{{3.765614380035067*^9, 3.7656143940999107`*^9}, {
+  3.7657871581909037`*^9, 3.765787189705214*^9}, {3.765787347583487*^9, 
+  3.7657873553178997`*^9}},ExpressionUUID->"ff10a64e-58e5-4702-ac10-\
 43d5045477e6"],
 
 Cell[CellGroupData[{
@@ -4486,7 +4689,7 @@ Cell[BoxData[{
       RowBox[{"PlotLabel", "\[Rule]", 
        RowBox[{"Style", "[", 
         RowBox[{
-        "\"\<Interactive Rate Curve: \\n Positive Feedback Mutual \
+        "\"\<Interactive Rate Curve Variable S: \\n Positive Feedback Mutual \
 Inhibition\>\"", ",", " ", 
          RowBox[{"FontSize", "\[Rule]", "18"}]}], "]"}]}], ",", 
       RowBox[{"PlotRange", "\[Rule]", 
@@ -4546,7 +4749,9 @@ Point(s)\>\"", ",", " ",
         RowBox[{"{", 
          RowBox[{"0", ",", "50"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "2.75"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"-", "2.75"}], ",", "2.75"}], "}"}]}], "}"}]}]}], "]"}], 
+   ",", 
    RowBox[{"{", 
     RowBox[{"O", ",", "0", ",", "2.5"}], "}"}]}], "]"}]}], "Code",
  CellChangeTimes->{{3.765608648744117*^9, 3.7656090538853893`*^9}, {
@@ -4555,9 +4760,10 @@ Point(s)\>\"", ",", " ",
    3.765609628161291*^9, 3.765617282283749*^9, {3.765770865644308*^9, 
    3.7657708991101923`*^9}, {3.76577391369235*^9, 3.7657740317935877`*^9}, {
    3.76577406850347*^9, 3.765774209405197*^9}, {3.76577437853332*^9, 
-   3.765774401756174*^9}},
+   3.765774401756174*^9}, {3.765787779838223*^9, 3.7657877818182163`*^9}, {
+   3.765788813177599*^9, 3.765788815822772*^9}},
  CellLabel->
-  "In[358]:=",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
+  "In[405]:=",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
 
 Cell[BoxData["S"], "Output",
  CellChangeTimes->{{3.765609030226837*^9, 3.765609054654656*^9}, {
@@ -4568,9 +4774,10 @@ Cell[BoxData["S"], "Output",
    3.7657153137707*^9, 3.765715430053916*^9, {3.765770880237639*^9, 
    3.765770900255855*^9}, 3.765774037433516*^9, 3.765774091416059*^9, {
    3.76577412230892*^9, 3.765774142670109*^9}, {3.765774195811778*^9, 
-   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402153676*^9}},
+   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402153676*^9}, {
+   3.7657878874532948`*^9, 3.765787898486639*^9}, 3.765788816544559*^9},
  CellLabel->
-  "Out[360]=",ExpressionUUID->"897f1cad-23da-4f8e-8e9f-678ac91566bc"],
+  "Out[407]=",ExpressionUUID->"61032b64-621e-48d8-80fd-6d5430a6cc57"],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{{{}, {}, 
@@ -4592,7 +4799,7 @@ Jzh/cvHLrIQ7CH6NqBy/UqQznL9Sk/VUyQMEn+0Lo+TBOBc4f7nBxrp5zxF8
 zaRVfn9zXeH82547N4W+RvAvLa7StS92g/N/bA60UfqE4P/fUbS1Lc8dzvc2
 cHOt+YrgH4/Vz8wu9oDzrdgDNmzdieCv21Dw/f9/BB8Aoznwig==
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$82353#1"]& ], 
+        Annotation[#, "Charting`Private`Tag$114816#1"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -4611,7 +4818,7 @@ Jzh/cvHLrIQ7CH6NqBy/UqQznL9Sk/VUyQMEn+0Lo+TBOBc4f7nBxrp5zxF8
 zaRVfn9zXeH82547N4W+RvAvLa7StS92g/N/bA60UfqE4P/fUbS1Lc8dzvc2
 cHOt+YrgH4/Vz8wu9oDzrdgDNmzdieCv21Dw/f9/BB8APabyKg==
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$82353#2"]& ], 
+        Annotation[#, "Charting`Private`Tag$114816#2"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -4630,7 +4837,7 @@ nD+5+GVWwh0Ev0ZUjl8p0hnOX6nJeqrkAYLP9oVR8mCcC5y/3GBj3bznCL5m
 0iq/v7mucP5tz52bQl8j+JcWV+naF7vB+T82B9oofULw/+8o2tqW5w7nexu4
 udZ8RfCPx+pnZhd7wPlW7AEbtu5E8NdtKPj+/z+CDwDeO7/+
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$82353#3"]& ], 
+        Annotation[#, "Charting`Private`Tag$114816#3"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -4748,7 +4955,7 @@ t9FX8FsiY/a53ie5owwUbdE4qcXFiwNpVMH2cQZCxZWOQW5ejLqWXLp+hoHu
 WsMpvst4sTnvFengHAOZ/m3DGvy8KHOH43BtgYG9cbq2LAFe9CzecLuFzUCz
 rcJ37wjxYumDwJmlJQby3PYS8Bbhxf8BEIBAog==
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$82353#4"]& ]}}, {}, {}}, {
+        Annotation[#, "Charting`Private`Tag$114816#4"]& ]}}, {}, {}}, {
     DisplayFunction -> Identity, Ticks -> {Automatic, Automatic}, 
      AxesOrigin -> {0, 0}, FrameTicks -> {{Automatic, 
         Charting`ScaledFrameTicks[{Identity, Identity}]}, {Automatic, 
@@ -5139,24 +5346,25 @@ rcJ37wjxYumDwJmlJQby3PYS8Bbhxf8BEIBAog==
    3.7657153137707*^9, 3.765715430053916*^9, {3.765770880237639*^9, 
    3.765770900255855*^9}, 3.765774037433516*^9, 3.765774091416059*^9, {
    3.76577412230892*^9, 3.765774142670109*^9}, {3.765774195811778*^9, 
-   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402290503*^9}},
+   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402153676*^9}, {
+   3.7657878874532948`*^9, 3.765787898486639*^9}, 3.7657888166724052`*^9},
  CellLabel->
-  "Out[361]=",ExpressionUUID->"2c6e0555-5984-4eef-a993-b13d7a20b37d"],
+  "Out[408]=",ExpressionUUID->"fc22a70f-a2aa-4d64-8d72-ce31cc28d582"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`B$$ = 1.145, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`B$$ = 1.6600000000000001`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`B$$], 0, 2.5}}, Typeset`size$$ = {421., {145., 151.}},
      Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`B$82433$$ = 0}, 
+    True, $CellContext`B$114896$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`B$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`B$$, $CellContext`B$82433$$, 0]}, 
+        Hold[$CellContext`B$$, $CellContext`B$114896$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -5173,7 +5381,7 @@ $CellContext`rateconstc], $CellContext`S -> $CellContext`B$$],
            ReplaceAll[$CellContext`v2, $CellContext`ratesc], \
 $CellContext`rateconstc]}], {$CellContext`R, 0, 50}, Frame -> True, 
         FrameLabel -> {"R", "Rates"}, PlotLegends -> {"v1", "v2"}, PlotLabel -> 
-        Style["Interactive Rate Curve: \n Positive Feedback Mutual \
+        Style["Interactive Rate Curve Variable S: \n Positive Feedback Mutual \
 Inhibition", FontSize -> 18], PlotRange -> {{0, 50}, {0, 2.75}}], 
       "Specifications" :> {{$CellContext`B$$, 0, 2.5}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
@@ -5196,23 +5404,24 @@ Inhibition", FontSize -> 18], PlotRange -> {{0, 50}, {0, 2.75}}],
    3.7657153137707*^9, 3.765715430053916*^9, {3.765770880237639*^9, 
    3.765770900255855*^9}, 3.765774037433516*^9, 3.765774091416059*^9, {
    3.76577412230892*^9, 3.765774142670109*^9}, {3.765774195811778*^9, 
-   3.765774209907868*^9}, {3.765774381303656*^9, 3.7657744024579563`*^9}},
+   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402153676*^9}, {
+   3.7657878874532948`*^9, 3.765787898486639*^9}, 3.76578881684656*^9},
  CellLabel->
-  "Out[362]=",ExpressionUUID->"2bd1203b-b67f-471e-8378-23a0cbceca24"],
+  "Out[409]=",ExpressionUUID->"31587ead-5b6b-47b8-9941-bc520db004a2"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{O$$ = 1.6600000000000001`, Typeset`show$$ = True, 
+   DynamicModuleBox[{O$$ = 0.795, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[O$$], 0, 2.5}}, Typeset`size$$ = {360., {145., 151.}}, 
+      Hold[O$$], 0, 2.5}}, Typeset`size$$ = {360., {146., 151.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    O$82457$$ = 0}, 
+    O$114920$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {O$$ = 0}, "ControllerVariables" :> {
-        Hold[O$$, O$82457$$, 0]}, 
+        Hold[O$$, O$114920$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -5227,10 +5436,10 @@ $CellContext`ratesc], $CellContext`rateconstc], $CellContext`S ->
            O$$]}], {$CellContext`R, 0, 50}, Frame -> True, 
         FrameLabel -> {"R", "R'"}, PlotLabel -> 
         Style["Interactive R v.s. R' with Variable S \n Showing the \
-Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 50}, {0, 2.75}}], 
-      "Specifications" :> {{O$$, 0, 2.5}}, "Options" :> {}, 
+Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 50}, {-2.75, 2.75}}],
+       "Specifications" :> {{O$$, 0, 2.5}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {189., 196.}},
+     ImageSizeCache->{407., {201., 208.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -5249,9 +5458,11 @@ Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 50}, {0, 2.75}}],
    3.7657153137707*^9, 3.765715430053916*^9, {3.765770880237639*^9, 
    3.765770900255855*^9}, 3.765774037433516*^9, 3.765774091416059*^9, {
    3.76577412230892*^9, 3.765774142670109*^9}, {3.765774195811778*^9, 
-   3.765774209907868*^9}, {3.765774381303656*^9, 3.7657744025648737`*^9}},
+   3.765774209907868*^9}, {3.765774381303656*^9, 3.765774402153676*^9}, {
+   3.7657878874532948`*^9, 3.765787898486639*^9}, 3.765788816959404*^9, 
+   3.76579352163862*^9},
  CellLabel->
-  "Out[364]=",ExpressionUUID->"b4a7500f-6c7b-41a1-a956-3dea59c5caf1"]
+  "Out[411]=",ExpressionUUID->"bda203cc-5ec8-4eda-b851-d620ec29298a"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5297,7 +5508,11 @@ Cell[BoxData[{
        RowBox[{
        "\"\<v1\>\"", ",", " ", "\"\<v2, S=0.5\>\"", ",", " ", 
         "\"\<v2, S=1\>\"", ",", " ", "\"\<v2, S=1.5\>\""}], "}"}]}], ","}], 
-    " ", "*)"}], "\[IndentingNewLine]", 
+    " ", "*)"}], "\n", 
+   RowBox[{"PlotStyle", " ", "\[Rule]", " ", 
+    RowBox[{"{", 
+     RowBox[{"Dashed", ",", " ", "Blue", ",", " ", "Blue"}], "}"}]}], ",", 
+   "\[IndentingNewLine]", 
    RowBox[{"PlotLabel", "\[Rule]", 
     RowBox[{"Style", "[", 
      RowBox[{
@@ -5310,15 +5525,17 @@ Cell[BoxData[{
   3.765690944463545*^9, 3.765690990735826*^9}, {3.765691024041473*^9, 
   3.7656910260852213`*^9}, {3.7656910754563093`*^9, 3.765691205279697*^9}, {
   3.7656918480123262`*^9, 3.765691848162744*^9}, {3.7657710292796183`*^9, 
-  3.765771033600801*^9}},
+  3.765771033600801*^9}, {3.765791500715555*^9, 3.765791506565248*^9}, {
+  3.765791549552547*^9, 3.7657915525182953`*^9}, {3.765793267621282*^9, 
+  3.7657933419763823`*^9}},
  CellLabel->
-  "In[296]:=",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
+  "In[425]:=",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {}, 
     TagBox[
      {RGBColor[0.368417, 0.506779, 0.709798], AbsoluteThickness[1.6], Opacity[
-      1.], LineBox[CompressedData["
+      1.], Dashing[{Small, Small}], LineBox[CompressedData["
 1:eJwVjnk41IsbxW0t5NJ8Z58xWZNKskUR72ui3OJGaRUV0Y5UsoUkbbZucaNd
 WiyhxVIqkqUwUiRbEZqxjF3UmJl+fn+c5zznOZ/nOUfTw3eDl5yMjEz6tP7v
 TXcfLRGr8yGS5+L2SkED+9/fLJdo8WH4T2Cc1m11bLM/TJVfwgftcsVHb+XV
@@ -5379,10 +5596,10 @@ woqmNGenk1LQ5d9fELiPhE9rL831ipSCvcWkbKobCW+XhX0IOiuFbu3U4QBn
 Esa8OBgXFyOF161zrrmtImFQ7lbHu5ek8CSEu5NqTELv+3bKhUnTmXpGwGOS
 8G7WznMzUqSgmssp6JiYi/8DgMLpIw==
        "]]},
-     Annotation[#, "Charting`Private`Tag$53205#1"]& ], 
+     Annotation[#, "Charting`Private`Tag$137775#1"]& ], 
     TagBox[
-     {RGBColor[0.880722, 0.611041, 0.142051], AbsoluteThickness[1.6], Opacity[
-      1.], LineBox[CompressedData["
+     {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[CompressedData["
 1:eJwVjnk0lHsch5G4GjPzWkqRayxNskTSVIrvj4isCUVkKVSTtNBYy9WRlK1l
 aKRdd8p6UNcS3ZBUiJKEyJhr6WIYqrHMvG/X/eM5nz+ecz7n0T54Yk+IjJSU
 lPci/y+90SsrmsQDdll7TUG8ANo+z32vo/DAqdOYg8UJYPrlcZPyVTxwxE/k
@@ -5416,10 +5633,10 @@ fui++ywBRkZhgzpMDD1pu4qFnCcgkDgLAywM3Ws81x5zcdGrfikQJmEo7dmx
 jIw0AiiZCvFCNoZiSr1d8q4SYNYw7Kn1GEOhXDvFqmwCnDU0Ul0aMJRXFJCy
 9OZir0mWSdQIhv4DllihPQ==
        "]]},
-     Annotation[#, "Charting`Private`Tag$53205#2"]& ], 
+     Annotation[#, "Charting`Private`Tag$137775#2"]& ], 
     TagBox[
-     {RGBColor[0.560181, 0.691569, 0.194885], AbsoluteThickness[1.6], Opacity[
-      1.], LineBox[{{8.163265306122448*^-8, 2.3913027087176175`}, {
+     {RGBColor[0, 0, 1], AbsoluteThickness[1.6], Opacity[1.], 
+      LineBox[{{8.163265306122448*^-8, 2.3913027087176175`}, {
        0.001226871682238507, 2.366149113983759}, {0.0024536617318239528`, 
        2.3398840269244916`}, {0.004907241830994845, 2.283521913774923}, {
        0.006134031880580291, 2.2531141963239563`}, {0.007360821930165736, 
@@ -5483,7 +5700,7 @@ D1GYb1Gr8POmcaD3og9/mEJKlOUmA5rGIvfQrppRCk4xe6bS/GhwVJ5kJ41T
 SHd3agzxp9FdtmrPlo8U9qoMZpp9RaNqT9Zi2ykKhcUhh5UBNFJMeGPT0xRC
 d+Wuzwui8S8nCVt3
        "]]},
-     Annotation[#, "Charting`Private`Tag$53205#3"]& ]}, {}, {}},
+     Annotation[#, "Charting`Private`Tag$137775#3"]& ]}, {}, {}},
   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
   Axes->{True, True},
   AxesLabel->{None, None},
@@ -5698,10 +5915,58 @@ d+Wuzwui8S8nCVt3
    3.765690910553049*^9}, {3.765690946478697*^9, 3.765690991240911*^9}, 
    3.7656910267043247`*^9, {3.765691080702527*^9, 3.765691205950389*^9}, {
    3.765691840874914*^9, 3.7656918487814217`*^9}, 3.765693890395238*^9, 
-   3.765715314178401*^9, 3.765771034690346*^9},
+   3.765715314178401*^9, 3.765771034690346*^9, 3.7657915092385063`*^9, 
+   3.765792338874732*^9, {3.76579331372323*^9, 3.765793342815178*^9}},
  CellLabel->
-  "Out[297]=",ExpressionUUID->"aea8d21a-1a7a-46d6-98ef-35d829504a71"]
+  "Out[426]=",ExpressionUUID->"9ef8ef32-0108-4e78-ba85-a3989b76c2ff"]
 }, Open  ]],
+
+Cell[TextData[{
+ "In the first graph, the rates for a given response due to the signal \
+strengths requested in the experiment were shown.  From this it can be seen \
+that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "440b6804-6ef9-4224-905b-561422daef6f"],
+ "is independent of S.  Also it can be seen that if the signal is within the \
+range of 0.7 < S <2.0, it appears that the system can either be low, or high \
+depending on the state of the response.  This is indicative of the critical \
+area of mutual inhibition, where in this range the response can either be \
+small or large.  This conclusion can be confirmed from the equations where it \
+can be seen that ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["v", "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "3194f50e-ebaf-45a5-b120-4dcf57cdcf82"],
+ " is dependent on E which is true of network(c).From the graphs, this would \
+appear to be somewhere between 0-10 for the critical area, as in this area, \
+it has the option to be small or large, but as S increases much further from \
+this point, it can only be large.  \n\nIn graph 3 the R v.s. R\
+\[CloseCurlyQuote] plot shows where the steady states of the system is, and \
+can show if they are stable.  Looking at the intersection with the X-axis \
+(R), if can be seen where the steady states are, and the value of R\
+\[CloseCurlyQuote] on either side of that shows if R is increasing or \
+decreasing at either side.  In this case, there are anywhere between 1 and 3 \
+steady states at any given time.  This can also be seeen in the signal \
+response curve.  Examining figure 3, it can be seen that 3 of the 3 points \
+are stable, the ones on the left and the right.  Examining the system when \
+the 3 states are present, such as when S = 1.2, it can be seen for the steady \
+state on the left that R is increasing towards that steady state, and after R \
+is decreasing back towards the steady state.  The second steady state, on the \
+left of the point, R decreasing away from the point towards the first steady \
+state,  and to the right of the point, it is increasing towards the third \
+steady state and therefor is unstable.  For the final steady state, to the \
+left of the point, it can be seen that the "
+}], "Text",
+ CellChangeTimes->{{3.7657928211936407`*^9, 3.7657928898399143`*^9}, {
+  3.765793363252335*^9, 3.765793626217463*^9}, {3.7657939239891253`*^9, 
+  3.765793941229453*^9}, {3.765794305150255*^9, 3.7657944288879538`*^9}, {
+  3.7657944704195347`*^9, 
+  3.7657944947437077`*^9}},ExpressionUUID->"ff85ea71-31e9-4f9a-894d-\
+cde0ed44e0cd"],
 
 Cell["Positive Feedback: Mutual Activation", "Text",
  CellChangeTimes->{{3.765614402418148*^9, 
@@ -5807,7 +6072,7 @@ Cell[BoxData[{
       RowBox[{"PlotLabel", "\[Rule]", 
        RowBox[{"Style", "[", 
         RowBox[{
-        "\"\<Interactive Rate Curve: \\n Positive Feedback Mutual \
+        "\"\<Interactive Rate Curve Variable S: \\n Positive Feedback Mutual \
 Activation\>\"", ",", " ", 
          RowBox[{"FontSize", "\[Rule]", "18"}]}], "]"}]}], ",", 
       RowBox[{"PlotRange", "\[Rule]", 
@@ -5860,7 +6125,8 @@ Point(s)\>\"", ",", " ",
         RowBox[{"{", 
          RowBox[{"0", ",", "1"}], "}"}], ",", 
         RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"O", ",", "0", ",", "20"}], "}"}]}], "]"}]}], "Code",
  InitializationCell->True,
@@ -5868,9 +6134,10 @@ Point(s)\>\"", ",", " ",
    3.765614728662801*^9, 3.765614814931428*^9}, 3.765617287669325*^9, {
    3.765691930961844*^9, 3.7656919414329233`*^9}, {3.7657710670605307`*^9, 
    3.765771071032812*^9}, {3.765774677555194*^9, 3.765774781736762*^9}, {
-   3.7657748271427937`*^9, 3.7657748483732157`*^9}},
+   3.7657748271427937`*^9, 3.7657748483732157`*^9}, {3.765787803538739*^9, 
+   3.765787805019375*^9}, {3.76578885755842*^9, 3.765788857982592*^9}},
  CellLabel->
-  "In[370]:=",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3"],
+  "In[412]:=",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3"],
 
 Cell[BoxData[
  TemplateBox[{GraphicsBox[{{{{}, {}, 
@@ -5987,7 +6254,7 @@ SLO1qpVhue466U3ILBPRScqehiwnyR2KN5tnotiBQTVn+cpkqoU4kwmqbP7R
 cyzLGLuPE5eY2Cvavdad5TXslOx731n1+0i4+LI8UanuaveLiVcyeW0BLDe4
 Ziko/mViA+WsVDjLj3Zs+vbvHxOlnBrBsSz/D6C1nIs=
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$87622#1"]& ], 
+        Annotation[#, "Charting`Private`Tag$116834#1"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -6101,7 +6368,7 @@ jdwt28krnFiIVVSNODfNRvtnitxajt3GEk1l2GwsvI+OEOZYzvjWMPk7G4Zp
 RHNZjnm4ezIif3L6/7W+TIHjEcJhR9s/bIy8jRJT5bjSMV153z825Cz0vbQ4
 frFt7cLyMhu0Z3u6jnP8f/nZzn0=
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$87622#2"]& ], 
+        Annotation[#, "Charting`Private`Tag$116834#2"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -6214,7 +6481,7 @@ zc97eOCP79tDJW2crlSow+bBVfVRThPpd1eb6wNGeHBiLrwzQDpu265oszEe
 fNSOlROkLw0mWcrzeAhPrPz6ifQmk4ucqkkeCh+0WU6QFuBnpcX84uFbhW/I
 d9Jcyh4Xu2ke/KRBmSJd5vJcWWWGh3U8qY/TpB+tXvJzbo6HKxFCYnOk/weI
 UuhJ
-          "]]}, Annotation[#, "Charting`Private`Tag$87622#3"]& ], 
+          "]]}, Annotation[#, "Charting`Private`Tag$116834#3"]& ], 
        TagBox[{
          Directive[
           Opacity[1.], 
@@ -6237,7 +6504,7 @@ tA1jj79BPXrrxMPd4rfoycXZ0XoOuiiiNfpCC1rnQL3HFKAlI6wKfRH6Q7b2
 mmgczfaKta+dQAe+PsI7L0V/uj/wlT6PLnY+xgpRo1PlZWGUZfThoFuyrjU0
 AT9WV6RFT/O9aHGbaAGt1sX1D/qFtZFGp0P/BaO4ekM=
           "]]}, 
-        Annotation[#, "Charting`Private`Tag$87622#4"]& ]}}, {}, {}}, {
+        Annotation[#, "Charting`Private`Tag$116834#4"]& ]}}, {}, {}}, {
     DisplayFunction -> Identity, Ticks -> {Automatic, Automatic}, 
      AxesOrigin -> {0, 0}, FrameTicks -> {{Automatic, 
         Charting`ScaledFrameTicks[{Identity, Identity}]}, {Automatic, 
@@ -6625,24 +6892,24 @@ AT9WV6RFT/O9aHGbaAGt1sX1D/qFtZFGp0P/BaO4ekM=
    3.765617837764031*^9, 3.765617943443215*^9, 3.765691224550576*^9, 
    3.76569194311451*^9, {3.765693867878047*^9, 3.765693892135385*^9}, 
    3.7657153143025208`*^9, 3.765771072453549*^9, 3.7657747600884857`*^9, 
-   3.7657748501208878`*^9},
+   3.7657748501208878`*^9, 3.765788858503848*^9},
  CellLabel->
-  "Out[372]=",ExpressionUUID->"32ffaae8-698c-4b55-826f-b3e133685dfb"],
+  "Out[414]=",ExpressionUUID->"bb843ed3-4230-4948-a359-a212e607804a"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`B$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`B$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`B$$], 0, 20}}, Typeset`size$$ = {421., {146., 153.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`B$87704$$ = 0}, 
+    True, $CellContext`B$116914$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`B$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`B$$, $CellContext`B$87704$$, 0]}, 
+        Hold[$CellContext`B$$, $CellContext`B$116914$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -6659,7 +6926,7 @@ $CellContext`rateconstd], $CellContext`S -> $CellContext`B$$],
            ReplaceAll[$CellContext`v2, $CellContext`ratesd], \
 $CellContext`rateconstd]}], {$CellContext`R, 0, 1}, Frame -> True, 
         FrameLabel -> {"R", "Rates"}, PlotLegends -> {"v1", "v2"}, PlotLabel -> 
-        Style["Interactive Rate Curve: \n Positive Feedback Mutual \
+        Style["Interactive Rate Curve Variable S: \n Positive Feedback Mutual \
 Activation", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}], 
       "Specifications" :> {{$CellContext`B$$, 0, 20}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
@@ -6679,23 +6946,23 @@ Activation", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}],
    3.765617837764031*^9, 3.765617943443215*^9, 3.765691224550576*^9, 
    3.76569194311451*^9, {3.765693867878047*^9, 3.765693892135385*^9}, 
    3.7657153143025208`*^9, 3.765771072453549*^9, 3.7657747600884857`*^9, 
-   3.7657748503265142`*^9},
+   3.7657748501208878`*^9, 3.765788858715177*^9},
  CellLabel->
-  "Out[373]=",ExpressionUUID->"6c1ca335-25ad-49fe-aa59-fd1224a2cdeb"],
+  "Out[415]=",ExpressionUUID->"49a39b27-44c9-4da4-ac38-cf98996695ce"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{O$$ = 4.05, Typeset`show$$ = True, 
+   DynamicModuleBox[{O$$ = 1.1500000000000001`, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[O$$], 0, 20}}, Typeset`size$$ = {360., {146., 153.}}, 
+      Hold[O$$], 0, 20}}, Typeset`size$$ = {360., {144., 150.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
-    O$87728$$ = 0}, 
+    O$116938$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {O$$ = 0}, "ControllerVariables" :> {
-        Hold[O$$, O$87728$$, 0]}, 
+        Hold[O$$, O$116938$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -6710,10 +6977,10 @@ $CellContext`ratesd], $CellContext`rateconstd], $CellContext`S ->
            O$$]}], {$CellContext`R, 0, 1}, Frame -> True, 
         FrameLabel -> {"R", "R'"}, PlotLabel -> 
         Style["Interactive R v.s. R' with Variable S \n Showing the \
-Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}], 
+Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {-1, 1}}], 
       "Specifications" :> {{O$$, 0, 20}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{407., {191., 198.}},
+     ImageSizeCache->{407., {188., 195.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -6729,9 +6996,9 @@ Equlibrium Point(s)", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}],
    3.765617837764031*^9, 3.765617943443215*^9, 3.765691224550576*^9, 
    3.76569194311451*^9, {3.765693867878047*^9, 3.765693892135385*^9}, 
    3.7657153143025208`*^9, 3.765771072453549*^9, 3.7657747600884857`*^9, 
-   3.7657748504251957`*^9},
+   3.7657748501208878`*^9, 3.765788858817787*^9},
  CellLabel->
-  "Out[374]=",ExpressionUUID->"66b883f8-4bc1-46a4-aeb4-b2a76b8363f5"]
+  "Out[416]=",ExpressionUUID->"43374033-9f3f-43b7-9d41-d422fd13e472"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -7583,8 +7850,8 @@ seen in the following table."
    3.7656231218268414`*^9}, 3.7656233669721823`*^9, {3.765624022794497*^9, 
    3.765624023989992*^9}, {3.765692543487393*^9, 3.765692556955699*^9}, {
    3.765693613330751*^9, 3.765693714466537*^9}, {3.765718510298485*^9, 
-   3.765718527857441*^9}, {3.7657738434169483`*^9, 
-   3.765773847525662*^9}},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
+   3.765718527857441*^9}, {3.7657738434169483`*^9, 3.765773847525662*^9}, 
+   3.765775547801538*^9},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
 7244efb96539"],
 
 Cell[CellGroupData[{
@@ -8047,74 +8314,76 @@ Cell[93146, 2051, 3021, 83, 230, "Code",ExpressionUUID->"6b366a47-1c47-418e-b064
  InitializationCell->True],
 Cell[96170, 2136, 46024, 835, 322, "Output",ExpressionUUID->"09fa5128-e61e-4ea8-9d7a-7af7864b93f7"]
 }, Open  ]],
-Cell[142209, 2974, 901, 18, 104, "Text",ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-f03599f890bd"]
+Cell[142209, 2974, 1000, 20, 104, "Text",ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-f03599f890bd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[143147, 2997, 153, 3, 45, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
-Cell[143303, 3002, 600, 10, 81, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
+Cell[143246, 2999, 153, 3, 45, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
+Cell[143402, 3004, 2425, 70, 188, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
 Cell[CellGroupData[{
-Cell[143928, 3016, 7665, 198, 862, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
-Cell[151596, 3216, 34785, 668, 316, "Output",ExpressionUUID->"829864a5-e4e2-4b9e-b3a5-6e6b35a00b08"],
-Cell[186384, 3886, 2879, 55, 404, "Output",ExpressionUUID->"540f9407-1dc3-4a8f-8e24-a70b1b1ae13d"],
-Cell[189266, 3943, 2775, 55, 404, "Output",ExpressionUUID->"eccf3c64-d268-4c74-8a3f-6ccb6e513a63"]
+Cell[145852, 3078, 7796, 201, 864, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
+Cell[153651, 3281, 34832, 668, 316, "Output",ExpressionUUID->"d527627a-7445-436a-8f48-3dbc9273f91f"],
+Cell[188486, 3951, 2910, 55, 404, "Output",ExpressionUUID->"0db2cfba-1e05-4254-b1ae-82d8c98ba3cd"],
+Cell[191399, 4008, 2823, 55, 402, "Output",ExpressionUUID->"3b272e12-8f87-44ef-8cbf-68c004755224"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[192078, 4003, 1956, 49, 164, "Code",ExpressionUUID->"f73734e7-02ca-4daa-b95b-82b79f7ae49f"],
-Cell[194037, 4054, 15556, 318, 314, "Output",ExpressionUUID->"8ff00701-14e7-40a1-a8b7-6b6327bdde2e"]
+Cell[194259, 4068, 1956, 49, 164, "Code",ExpressionUUID->"f73734e7-02ca-4daa-b95b-82b79f7ae49f"],
+Cell[196218, 4119, 15556, 318, 314, "Output",ExpressionUUID->"8ff00701-14e7-40a1-a8b7-6b6327bdde2e"]
 }, Open  ]],
-Cell[209608, 4375, 180, 3, 35, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
+Cell[211789, 4440, 3591, 56, 495, "Text",ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-b20485fe2036"],
+Cell[215383, 4498, 2537, 83, 142, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
 Cell[CellGroupData[{
-Cell[209813, 4382, 6571, 177, 802, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
-Cell[216387, 4561, 754, 11, 35, "Output",ExpressionUUID->"897f1cad-23da-4f8e-8e9f-678ac91566bc"],
-Cell[217144, 4574, 29222, 569, 316, "Output",ExpressionUUID->"2c6e0555-5984-4eef-a993-b13d7a20b37d"],
-Cell[246369, 5145, 2812, 55, 404, "Output",ExpressionUUID->"2bd1203b-b67f-471e-8378-23a0cbceca24"],
-Cell[249184, 5202, 2599, 51, 404, "Output",ExpressionUUID->"b4a7500f-6c7b-41a1-a956-3dea59c5caf1"]
+Cell[217945, 4585, 6713, 180, 802, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
+Cell[224661, 4767, 828, 12, 35, "Output",ExpressionUUID->"61032b64-621e-48d8-80fd-6d5430a6cc57"],
+Cell[225492, 4781, 29302, 570, 316, "Output",ExpressionUUID->"fc22a70f-a2aa-4d64-8d72-ce31cc28d582"],
+Cell[254797, 5353, 2910, 56, 404, "Output",ExpressionUUID->"31587ead-5b6b-47b8-9941-bc520db004a2"],
+Cell[257710, 5411, 2688, 53, 428, "Output",ExpressionUUID->"bda203cc-5ec8-4eda-b851-d620ec29298a"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[251820, 5258, 2162, 56, 142, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
-Cell[253985, 5316, 19529, 386, 316, "Output",ExpressionUUID->"aea8d21a-1a7a-46d6-98ef-35d829504a71"]
+Cell[260435, 5469, 2460, 62, 164, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
+Cell[262898, 5533, 19610, 387, 316, "Output",ExpressionUUID->"9ef8ef32-0108-4e78-ba85-a3989b76c2ff"]
 }, Open  ]],
-Cell[273529, 5705, 180, 3, 35, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
+Cell[282523, 5923, 2675, 45, 403, "Text",ExpressionUUID->"ff85ea71-31e9-4f9a-894d-cde0ed44e0cd"],
+Cell[285201, 5970, 180, 3, 35, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
 Cell[CellGroupData[{
-Cell[273734, 5712, 5997, 160, 714, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
+Cell[285406, 5977, 6129, 162, 714, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
  InitializationCell->True],
-Cell[279734, 5874, 40467, 755, 316, "Output",ExpressionUUID->"32ffaae8-698c-4b55-826f-b3e133685dfb"],
-Cell[320204, 6631, 2537, 52, 408, "Output",ExpressionUUID->"6c1ca335-25ad-49fe-aa59-fd1224a2cdeb"],
-Cell[322744, 6685, 2312, 48, 408, "Output",ExpressionUUID->"66b883f8-4bc1-46a4-aeb4-b2a76b8363f5"]
+Cell[291538, 6141, 40493, 755, 316, "Output",ExpressionUUID->"bb843ed3-4230-4948-a359-a212e607804a"],
+Cell[332034, 6898, 2571, 52, 408, "Output",ExpressionUUID->"49a39b27-44c9-4da4-ac38-cf98996695ce"],
+Cell[334608, 6952, 2352, 48, 402, "Output",ExpressionUUID->"43374033-9f3f-43b7-9d41-d422fd13e472"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[325093, 6738, 2040, 54, 142, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
-Cell[327136, 6794, 15587, 320, 314, "Output",ExpressionUUID->"d9e31c19-5fc0-4ca6-bec5-68da5a66fdbc"]
+Cell[336997, 7005, 2040, 54, 142, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
+Cell[339040, 7061, 15587, 320, 314, "Output",ExpressionUUID->"d9e31c19-5fc0-4ca6-bec5-68da5a66fdbc"]
 }, Open  ]],
-Cell[342738, 7117, 411, 9, 81, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
+Cell[354642, 7384, 411, 9, 81, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[343210, 7133, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
+Cell[355114, 7400, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
 Cell[CellGroupData[{
-Cell[343390, 7140, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
-Cell[343564, 7145, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
+Cell[355294, 7407, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
+Cell[355468, 7412, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
 }, Open  ]],
-Cell[343738, 7151, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[343947, 7159, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
-Cell[CellGroupData[{
-Cell[344129, 7166, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
-Cell[344303, 7171, 159, 3, 35, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
+Cell[355642, 7418, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[344499, 7179, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
-Cell[344674, 7184, 22278, 403, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[355851, 7426, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
 Cell[CellGroupData[{
-Cell[366977, 7591, 7026, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
-Cell[374006, 7787, 1897, 52, 192, "Output",ExpressionUUID->"283a3d1f-8751-4641-ab9f-dbf2af046b52"]
+Cell[356033, 7433, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
+Cell[356207, 7438, 159, 3, 35, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
 }, Open  ]],
-Cell[375918, 7842, 303, 7, 35, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
 Cell[CellGroupData[{
-Cell[376246, 7853, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
-Cell[377213, 7873, 4970, 119, 156, "Output",ExpressionUUID->"7263f062-8437-48a7-94f5-26e79ce7cde7"]
+Cell[356403, 7446, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
+Cell[356578, 7451, 22300, 403, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[CellGroupData[{
+Cell[378903, 7858, 7026, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
+Cell[385932, 8054, 1897, 52, 192, "Output",ExpressionUUID->"283a3d1f-8751-4641-ab9f-dbf2af046b52"]
+}, Open  ]],
+Cell[387844, 8109, 303, 7, 35, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
+Cell[CellGroupData[{
+Cell[388172, 8120, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
+Cell[389139, 8140, 4970, 119, 156, "Output",ExpressionUUID->"7263f062-8437-48a7-94f5-26e79ce7cde7"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
