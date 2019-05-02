@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    745399,      15143]
-NotebookOptionsPosition[    736217,      14993]
-NotebookOutlinePosition[    736575,      15009]
-CellTagsIndexPosition[    736532,      15006]
+NotebookDataLength[    748423,      15188]
+NotebookOptionsPosition[    739139,      15037]
+NotebookOutlinePosition[    739496,      15053]
+CellTagsIndexPosition[    739453,      15050]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -14167,9 +14167,26 @@ Cell["Background and Theory", "Subsection",
   3.7656059996043158`*^9}},ExpressionUUID->"b5550e51-4c8e-4e54-907e-\
 19b49e51c71f"],
 
-Cell["Hi this is text", "Text",
- CellChangeTimes->{{3.765606010674778*^9, 
-  3.7656060136864767`*^9}},ExpressionUUID->"9e0e3766-fe26-40df-8512-\
+Cell["\<\
+Logical modelling is based on the idea that the system variables can take on \
+a discrete number of states/values and that the states can transition to each \
+other in a systematic way based on rules.  In the most frequently used \
+logical models, Boolean models, the variables can have 2 states, 0 or 1.  Im \
+most variants time is not represented as transition take place at each time \
+step, but these steps can be of different durations.  Logical models allow \
+for the dynamics of the system to be captured in a system level way, allowing \
+the investigation of where the system can reach from any given state after a \
+number of steps.  It allows observations to be made on the presence of \
+attractors, repulsers, oscillations ect. This requires the system to be able \
+to be described in a system of rules, which govern how each part of the \
+network reacts to the other parts of the network.  These can be complex, so \
+state transition tables are often used to determine what the state at the \
+next time step is for each possible state.  Once this is completed, a state \
+transition graph can be complete which shows clearly how the states are \
+transitioning in the network and any interesting features of the network.  \
+\>", "Text",
+ CellChangeTimes->{{3.765606010674778*^9, 3.7656060136864767`*^9}, 
+   3.765810644109335*^9},ExpressionUUID->"9e0e3766-fe26-40df-8512-\
 6a243e977055"]
 }, Open  ]],
 
@@ -14181,7 +14198,7 @@ Cell["Results and Discussion", "Subsection",
 c8dfa5bd4c2b"],
 
 Cell[TextData[{
- "The bollean network was defined as:\n",
+ "The bollean network for this part of the experiment was defined as:\n",
  Cell[BoxData[
   GraphicsBox[
    TagBox[RasterBox[CompressedData["
@@ -14504,8 +14521,8 @@ such a simple system the  rules for the system can be defined as follows.\n\n",
 (X(t) AND Z(t))\n- Y(t+1) = 1 \tif \tX(t) AND Z(t)\n- Z(t+1) = 0 \tif \tNOT \
 Y(t)\n- Z(t+1) = 1 \tif \tY(t)\n\nFrom this a state transition table can be \
 constructed which takes into consideration all previous states and the \
-resulting states at the next time step.  This can written out as it is a \
-simple system, and can be seen in the following table.  \n\n",
+resulting states at the next time step.  This can written out manually as it \
+is a simple system, and can be seen in the following table.\n\n",
  Cell[BoxData[GridBox[{
     {
      StyleBox[
@@ -14582,7 +14599,8 @@ seen in the following table."
    3.765624023989992*^9}, {3.765692543487393*^9, 3.765692556955699*^9}, {
    3.765693613330751*^9, 3.765693714466537*^9}, {3.765718510298485*^9, 
    3.765718527857441*^9}, {3.7657738434169483`*^9, 3.765773847525662*^9}, 
-   3.765775547801538*^9},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
+   3.765775547801538*^9, {3.7658106198125134`*^9, 
+   3.765810651645802*^9}},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
 7244efb96539"],
 
 Cell[CellGroupData[{
@@ -14837,12 +14855,15 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell["\<\
-This is the state transition graph showing the states (X,Y,Z) and the next \
-time state from that state.\
+The two tables match each other and confirm that the state transition table \
+is accurate given the rules define above.  Once this was confirmed a state \
+transition graph could be constructed using mathematica.  This  state \
+transition graph showing the states (X,Y,Z) and the next time state from that \
+state.\
 \>", "Text",
  CellChangeTimes->{{3.765633330399358*^9, 3.765633343104928*^9}, {
-  3.765773861104116*^9, 
-  3.765773878554902*^9}},ExpressionUUID->"b58f93d5-4ade-405b-99f4-\
+   3.765773861104116*^9, 3.765773878554902*^9}, 
+   3.7658106112882843`*^9},ExpressionUUID->"b58f93d5-4ade-405b-99f4-\
 687162f84265"],
 
 Cell[CellGroupData[{
@@ -14986,15 +15007,38 @@ Cell[BoxData[
   3.765693232270795*^9, 3.765715316775584*^9, 3.765794740038782*^9, 
   3.765803134205204*^9, 3.765806029147037*^9},
  CellLabel->"Out[61]=",ExpressionUUID->"d516c73e-8146-4c00-a8f7-9337784529e3"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+The state transition graphs above show 2 separate systems given the \
+conditions present.  They do not connect to each other and therefor the \
+system is dependent on the starting conditions.  If the system starts in one \
+of the states in the top state transition graph, it will be attracted to the \
+attractor 100.  This is due to how Z inhibits the production of X, which in \
+turn stops more Y from being produced.  Since there is no X and Z present at \
+the same time outside of the state 111 no more Y can be produced, which leads \
+to state 000.  At this state point only X can be produced as without Z, Y \
+cannot be produced and without Y, Z cannot be produced.  X continuously \
+produces itself when no Z is present and therefor it stays in that state.
+
+In the second state transition graph, the system oscillates between 010 and \
+101, which is also an attractor for the only other state in this part of the \
+system 110.  This is because in that state Y can produce Z, and still make X \
+as there is no Z to inhibit.  It then causes makes the state 101 where Y is \
+produced and allows for both X and Z to be produced, which in turn can only \
+make Y, leading to the oscillation.  \
+\>", "Text",
+ CellChangeTimes->{{3.765810592742944*^9, 
+  3.7658106027960653`*^9}},ExpressionUUID->"3100533b-b3eb-4f44-87c9-\
+6220d5ccd345"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 1016},
-WindowMargins->{{0, Automatic}, {0, Automatic}},
+WindowSize->{960, 1025},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 WindowStatusArea->None,
-FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -15009,47 +15053,47 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 155, 3, 99, "Title",ExpressionUUID->"e1877306-52c1-4803-bba9-1dc7383d5d08"],
+Cell[580, 22, 155, 3, 98, "Title",ExpressionUUID->"e1877306-52c1-4803-bba9-1dc7383d5d08"],
 Cell[738, 27, 152, 3, 54, "Subtitle",ExpressionUUID->"46599549-fe2c-4171-bf9e-b17d6c8fefce"],
 Cell[893, 32, 201, 3, 32, "Subsubtitle",ExpressionUUID->"00c534a6-123f-4853-9e17-89faa94fab0b"],
 Cell[CellGroupData[{
 Cell[1119, 39, 156, 3, 68, "Section",ExpressionUUID->"3e6cf71c-edd6-44f8-9206-59eb5806eb3a"],
-Cell[1278, 44, 3683, 53, 348, "Text",ExpressionUUID->"ada76cfc-95ae-41e2-83df-f0f4bd733556"]
+Cell[1278, 44, 3683, 53, 564, "Text",ExpressionUUID->"ada76cfc-95ae-41e2-83df-f0f4bd733556"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[4998, 102, 322, 6, 68, "Section",ExpressionUUID->"ddea0a4f-2433-45b2-980a-c0defec53bde"],
 Cell[CellGroupData[{
 Cell[5345, 112, 171, 3, 55, "Subsection",ExpressionUUID->"54958ad4-4262-4a2d-bad9-43afbc6f81bd"],
-Cell[5519, 117, 36312, 811, 1854, "Text",ExpressionUUID->"9b5e775e-db0f-490e-bc82-03a00775b8e2"]
+Cell[5519, 117, 36312, 811, 2106, "Text",ExpressionUUID->"9b5e775e-db0f-490e-bc82-03a00775b8e2"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[41868, 933, 172, 3, 55, "Subsection",ExpressionUUID->"ca9885c6-520c-4385-80a1-6eeb52d77314"],
 Cell[CellGroupData[{
-Cell[42065, 940, 250, 4, 46, "Subsubsection",ExpressionUUID->"1a0244cf-600e-49e2-9fdc-bb46fa704656"],
-Cell[42318, 946, 814, 18, 60, "Text",ExpressionUUID->"0290ddf1-840e-4083-9a02-91877292e62e"],
+Cell[42065, 940, 250, 4, 45, "Subsubsection",ExpressionUUID->"1a0244cf-600e-49e2-9fdc-bb46fa704656"],
+Cell[42318, 946, 814, 18, 81, "Text",ExpressionUUID->"0290ddf1-840e-4083-9a02-91877292e62e"],
 Cell[CellGroupData[{
 Cell[43157, 968, 4601, 122, 494, "Code",ExpressionUUID->"e521d874-37ba-4fd0-9dff-9fcae6393c25"],
-Cell[47761, 1092, 34364, 691, 284, "Output",ExpressionUUID->"9bed5c15-e6a8-4e15-a2e4-3ba2bad3cc12"],
-Cell[82128, 1785, 10116, 224, 305, "Output",ExpressionUUID->"b2d608c2-bc19-4932-83c9-474b91456c34"]
+Cell[47761, 1092, 34364, 691, 289, "Output",ExpressionUUID->"9bed5c15-e6a8-4e15-a2e4-3ba2bad3cc12"],
+Cell[82128, 1785, 10116, 224, 313, "Output",ExpressionUUID->"b2d608c2-bc19-4932-83c9-474b91456c34"]
 }, Open  ]],
-Cell[92259, 2012, 1687, 31, 108, "Text",ExpressionUUID->"ee982a9c-50d5-469f-b6f0-0939ecf76218"]
+Cell[92259, 2012, 1687, 31, 173, "Text",ExpressionUUID->"ee982a9c-50d5-469f-b6f0-0939ecf76218"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93983, 2048, 206, 4, 46, "Subsubsection",ExpressionUUID->"79ddca76-2514-4230-aa8e-749d8e97774c"],
-Cell[94192, 2054, 290, 6, 36, "Text",ExpressionUUID->"925d5181-c89c-4d17-98a3-2f03acdc6c9f"],
+Cell[93983, 2048, 206, 4, 45, "Subsubsection",ExpressionUUID->"79ddca76-2514-4230-aa8e-749d8e97774c"],
+Cell[94192, 2054, 290, 6, 58, "Text",ExpressionUUID->"925d5181-c89c-4d17-98a3-2f03acdc6c9f"],
 Cell[CellGroupData[{
 Cell[94507, 2064, 3111, 83, 230, "Code",ExpressionUUID->"6b366a47-1c47-418e-b064-de7a26df6851",
  InitializationCell->True],
-Cell[97621, 2149, 46548, 843, 314, "Output",ExpressionUUID->"ba76bcfb-4856-49ed-bed0-46945b3acbec"]
+Cell[97621, 2149, 46548, 843, 322, "Output",ExpressionUUID->"ba76bcfb-4856-49ed-bed0-46945b3acbec"]
 }, Open  ]],
-Cell[144184, 2995, 1780, 33, 108, "Text",ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-f03599f890bd"]
+Cell[144184, 2995, 1780, 33, 196, "Text",ExpressionUUID->"4b03a6f3-d51b-4fd2-bd20-f03599f890bd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[146001, 3033, 153, 3, 46, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
-Cell[146157, 3038, 2479, 71, 142, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
+Cell[146001, 3033, 153, 3, 45, "Subsubsection",ExpressionUUID->"ed299abd-744b-4c51-b321-21884235dc22"],
+Cell[146157, 3038, 2479, 71, 188, "Text",ExpressionUUID->"a9e35c1c-3234-4774-ab83-577bec1073c1"],
 Cell[CellGroupData[{
-Cell[148661, 3113, 7792, 200, 861, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
-Cell[156456, 3315, 35264, 676, 309, "Output",ExpressionUUID->"7395066f-f9ae-43da-8b97-601b253181d7"],
+Cell[148661, 3113, 7792, 200, 862, "Code",ExpressionUUID->"fadf884a-9027-4d76-8a88-531150674c7a"],
+Cell[156456, 3315, 35264, 676, 316, "Output",ExpressionUUID->"7395066f-f9ae-43da-8b97-601b253181d7"],
 Cell[191723, 3993, 3001, 56, 396, "Output",ExpressionUUID->"07b72c18-517d-4f3d-a2ae-e62b59f439e2"],
 Cell[194727, 4051, 2919, 56, 394, "Output",ExpressionUUID->"32427553-d96e-4a22-aaea-ab7fa0479e40"]
 }, Open  ]],
@@ -15118,30 +15162,31 @@ Cell[596751, 12207, 1609, 24, 132, "Text",ExpressionUUID->"d71f492e-89e6-4ade-ad
 Cell[CellGroupData[{
 Cell[598385, 12235, 9861, 278, 860, "Input",ExpressionUUID->"8b45d994-1578-4849-aacb-6b51b3e06e4f"],
 Cell[608249, 12515, 15638, 311, 297, "Output",ExpressionUUID->"18b31cbf-14b9-491b-888a-828817c83308"],
-Cell[623890, 12828, 37446, 669, 293, "Output",ExpressionUUID->"1b7c7b11-33cc-4450-acb3-bce43f30bf39"],
-Cell[661339, 13499, 33760, 609, 290, "Output",ExpressionUUID->"e40aad9d-3264-4357-a0d1-2527eacd4235"]
+Cell[623890, 12828, 37446, 669, 296, "Output",ExpressionUUID->"1b7c7b11-33cc-4450-acb3-bce43f30bf39"],
+Cell[661339, 13499, 33760, 609, 295, "Output",ExpressionUUID->"e40aad9d-3264-4357-a0d1-2527eacd4235"]
 }, Open  ]],
-Cell[695114, 14111, 2828, 40, 252, "Text",ExpressionUUID->"88e44278-d560-44dc-8a73-d626814f62f2"]
+Cell[695114, 14111, 2828, 40, 495, "Text",ExpressionUUID->"88e44278-d560-44dc-8a73-d626814f62f2"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[697991, 14157, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
 Cell[CellGroupData[{
 Cell[698173, 14164, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
-Cell[698347, 14169, 159, 3, 36, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
+Cell[698347, 14169, 1407, 20, 242, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[698543, 14177, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
-Cell[698718, 14182, 22300, 403, 893, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[699791, 14194, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
+Cell[699966, 14199, 22391, 404, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
 Cell[CellGroupData[{
-Cell[721043, 14589, 7023, 193, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
-Cell[728069, 14784, 1821, 51, 192, "Output",ExpressionUUID->"36d6eedf-adb4-4003-8422-38beaf20ff31"]
+Cell[722382, 14607, 7023, 193, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
+Cell[729408, 14802, 1821, 51, 192, "Output",ExpressionUUID->"36d6eedf-adb4-4003-8422-38beaf20ff31"]
 }, Open  ]],
-Cell[729905, 14838, 303, 7, 36, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
+Cell[731244, 14856, 538, 10, 81, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
 Cell[CellGroupData[{
-Cell[730233, 14849, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
-Cell[731200, 14869, 4965, 118, 166, "Output",ExpressionUUID->"d516c73e-8146-4c00-a8f7-9337784529e3"]
-}, Open  ]]
+Cell[731807, 14870, 964, 18, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
+Cell[732774, 14890, 4965, 118, 166, "Output",ExpressionUUID->"d516c73e-8146-4c00-a8f7-9337784529e3"]
+}, Open  ]],
+Cell[737754, 15011, 1345, 21, 265, "Text",ExpressionUUID->"3100533b-b3eb-4f44-87c9-6220d5ccd345"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

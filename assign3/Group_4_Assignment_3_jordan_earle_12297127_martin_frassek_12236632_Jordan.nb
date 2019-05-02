@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    403786,       8439]
-NotebookOptionsPosition[    396841,       8318]
-NotebookOutlinePosition[    397198,       8334]
-CellTagsIndexPosition[    397155,       8331]
+NotebookDataLength[    410937,       8589]
+NotebookOptionsPosition[    403888,       8467]
+NotebookOutlinePosition[    404245,       8483]
+CellTagsIndexPosition[    404202,       8480]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4452,16 +4452,14 @@ strengths requested in the experiment were shown.  From this, and the ODE, it \
 can be seen that ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["v", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["v", "1"], TraditionalForm]],ExpressionUUID->
   "fe5fd73d-5531-4694-8e0f-2e676f85f4f1"],
  "is independent of S.  From this information alone it can be determined that \
-this therefor corresponds to network d from the figure as it is the only \
+this therefor corresponds to network (d) from the figure as it is the only \
 network for which ",
  Cell[BoxData[
   FormBox[
-   SubscriptBox["v", "1"], TraditionalForm]],
-  FormatType->"TraditionalForm",ExpressionUUID->
+   SubscriptBox["v", "1"], TraditionalForm]],ExpressionUUID->
   "543436e8-dde0-43ae-aa97-e921214ade17"],
  " is independent of the signal.  The second graph, the concentration of S is \
 varied dynamically and the resulting steady states can be observed.  In this \
@@ -4501,7 +4499,8 @@ that the system is no longer able to maintain the homeostasis.  "
   3.765788986021105*^9, 3.765789071221283*^9}, {3.76579162372556*^9, 
   3.7657918112606583`*^9}, {3.765792909688801*^9, 3.765792971458379*^9}, {
   3.765793023010991*^9, 3.765793084445794*^9}, {3.765793167580318*^9, 
-  3.765793173971652*^9}},ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-\
+  3.765793173971652*^9}, {3.7658021371272078`*^9, 
+  3.7658021382053957`*^9}},ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-\
 b20485fe2036"],
 
 Cell[TextData[{
@@ -5949,7 +5948,7 @@ that ",
   "405471e8-f9e3-4ba2-a2c5-85bc4cb92884"],
  " is dependent on E, which only occurs in network (c).  Therefor it can be \
 concluded that network (c) is mutual inhibition.   \n\nFrom the graphs it can \
-be seen taht when the signal is within the range of 0.7 < S <2.0, that the \
+be seen that when the signal is within the range of 0.7 < S <2.0, that the \
 system can either be low, or high depending on the state of the response.  \
 This is indicative of the critical area of mutual inhibition, where in this \
 range the response can either be small or large, on or off.  In graph 3 the R \
@@ -5979,19 +5978,87 @@ of the mutual inhibition.  "
    3.765795114845028*^9, 3.765795139610714*^9}, {3.765795253367385*^9, 
    3.7657952996250277`*^9}, {3.765795345781954*^9, 3.7657954155314302`*^9}, {
    3.7657954725196733`*^9, 3.7657955813048277`*^9}, {3.765796321862651*^9, 
-   3.765796328469812*^9}},ExpressionUUID->"ff85ea71-31e9-4f9a-894d-\
+   3.765796328469812*^9}, 
+   3.765802699049662*^9},ExpressionUUID->"ff85ea71-31e9-4f9a-894d-\
 cde0ed44e0cd"],
 
-Cell["\<\
-The final of the ODE\[CloseCurlyQuote]s which was examined was that of the \
+Cell[TextData[{
+ "The final of the ODE\[CloseCurlyQuote]s which was examined was that of the \
 final of the positive feedback mutual activation.  The graph of the rate and \
 signal-response curve can be seen in the following figures based off the \
-following ODE.\
-\>", "Text",
+following ODE.\n\n",
+ Cell[BoxData[{
+  FormBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[DifferentialD]", "R"}], 
+     RowBox[{"\[DifferentialD]", "t"}]], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["k", "0"], 
+      RowBox[{
+       SubscriptBox["E", "p"], "(", "R", ")"}]}], "+", 
+     RowBox[{
+      SubscriptBox["k", "1"], "S"}], "-", 
+     RowBox[{
+      SubscriptBox["k", "2"], "R"}]}]}], 
+   TraditionalForm], "\[IndentingNewLine]", 
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["E", "p"], "(", "R", ")"}], "=", 
+    RowBox[{"G", "(", 
+     RowBox[{
+      RowBox[{
+       SubscriptBox["k", "3"], "R"}], ",", 
+      SubscriptBox["k", "4"], ",", 
+      SubscriptBox["J", "3"], ",", 
+      SubscriptBox["J", "4"]}], ")"}]}], TraditionalForm]}],ExpressionUUID->
+  "f2ef39fe-b659-4cf2-8af4-d0524f1b5fff"],
+ "\twith ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "0"], " ", "="}], TraditionalForm]],ExpressionUUID->
+  "2253b23c-8d94-45be-9df2-a3e5b60a84f6"],
+ " 0.4, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "1"], "="}], TraditionalForm]],ExpressionUUID->
+  "ef21a92a-3daa-4d1b-9fe9-7531ba86fde6"],
+ " 0.01, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "2"], "="}], TraditionalForm]],ExpressionUUID->
+  "9f401383-f319-4b6f-bc6b-4c9284299d83"],
+ " ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "3"], "="}], TraditionalForm]],ExpressionUUID->
+  "a8a2fe7f-66f9-43c6-8dd8-e645fdb16f24"],
+ " 1, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["k", "4"], "="}], TraditionalForm]],ExpressionUUID->
+  "c1184d77-13f7-4ad3-ae39-bb6ef92e1a49"],
+ " 0.2, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["J", "3"], "=", " ", 
+    RowBox[{
+     SubscriptBox["J", "4"], "="}]}], TraditionalForm]],ExpressionUUID->
+  "f366d203-b7c4-4303-a923-b9e212c274ef"],
+ " 0.05."
+}], "Text",
  CellChangeTimes->{{3.765614402418148*^9, 3.7656144102190657`*^9}, {
    3.76579559955529*^9, 3.765795602693379*^9}, {3.765795640348404*^9, 
-   3.765795654363533*^9}, 
-   3.7657959784608603`*^9},ExpressionUUID->"54212451-1b7d-4331-a3e8-\
+   3.765795654363533*^9}, 3.7657959784608603`*^9, {3.76580671261524*^9, 
+   3.76580671345219*^9}},ExpressionUUID->"54212451-1b7d-4331-a3e8-\
 6735815350b3"],
 
 Cell[CellGroupData[{
@@ -6921,7 +6988,7 @@ AT9WV6RFT/O9aHGbaAGt1sX1D/qFtZFGp0P/BaO4ekM=
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`B$$ = 0., Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`B$$ = 1.35, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -6952,7 +7019,7 @@ $CellContext`rateconstd]}], {$CellContext`R, 0, 1}, Frame -> True,
 Activation", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}], 
       "Specifications" :> {{$CellContext`B$$, 0, 20}}, "Options" :> {}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{468., {191., 198.}},
+     ImageSizeCache->{468., {202., 209.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -6969,14 +7036,14 @@ Activation", FontSize -> 18], PlotRange -> {{0, 1}, {0, 1}}],
    3.76569194311451*^9, {3.765693867878047*^9, 3.765693892135385*^9}, 
    3.7657153143025208`*^9, 3.765771072453549*^9, 3.7657747600884857`*^9, 
    3.7657748501208878`*^9, 3.765788858503848*^9, 3.765794861686843*^9, 
-   3.765795997408145*^9},
+   3.765795997408145*^9, 3.7658027322813272`*^9},
  CellLabel->
   "Out[526]=",ExpressionUUID->"8b9bde26-c117-4e98-beee-2839d160431e"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{O$$ = 1.6, Typeset`show$$ = True, 
+   DynamicModuleBox[{O$$ = 1.25, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
@@ -7433,14 +7500,45 @@ that ",
    SubscriptBox["E", "p"], TraditionalForm]],
   FormatType->"TraditionalForm",ExpressionUUID->
   "b99f5ce2-6320-474a-b553-4b3b98d2dddc"],
- ", which only occurs in network (b).  Therefor it can be concluded that \
-network (c) is mutual activation.   \n\n\n"
+ ", which only occurs in network (b).    Therefor it can be concluded that \
+network (b) is mutual activation.   Upon examining the network diagram it can \
+also be seen that both S and ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["E", "P"], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "a31444ba-04f5-4617-b7e5-fba6aaaaa7ec"],
+ " are stimulating the synthesis which is again indicative of mutual \
+activation.\n\nFrom the interactive graph 2 and 3, it can be seen that the \
+critical value of S ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"(", 
+    SubscriptBox["S", "crit"]}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "db39372c-8631-479a-81f3-d9ee8960c9b5"],
+ ") is around 10-12.  Before this point the system is bistable, and can be \
+reversed.  From the signal response curve it can be seen that it is \
+discontinuous, unlike the example of the mutual inhibition which was \
+continuous.  This is confirmed in the signal response curve, as the first of \
+the two distinct steady states does not proceed past this point.  The steady \
+states of the system can be found using the same process as previous \
+networks.  There are anywhere between one and three steady states at any \
+point in the system.  This can be seen for example at S = 5, and from the R \
+v.s. R\[CloseCurlyQuote] plot, it can be determined that the first is stable, \
+the second is unstable and the third is stable, for the same reasons as the \
+mutual inhibition system.  "
 }], "Text",
  CellChangeTimes->{{3.7656180404919558`*^9, 3.7656180797381907`*^9}, {
-  3.7656961268002157`*^9, 3.7656961368599377`*^9}, {3.76579601560555*^9, 
-  3.765796038565131*^9}, {3.7657961264935617`*^9, 3.7657961281868773`*^9}, {
-  3.765797100750266*^9, 
-  3.765797111697928*^9}},ExpressionUUID->"34cf60a3-4dcf-4287-a26d-\
+   3.7656961268002157`*^9, 3.7656961368599377`*^9}, {3.76579601560555*^9, 
+   3.765796038565131*^9}, {3.7657961264935617`*^9, 3.7657961281868773`*^9}, {
+   3.765797100750266*^9, 3.765797111697928*^9}, {3.7658021196807547`*^9, 
+   3.7658021197341747`*^9}, {3.7658023482521467`*^9, 3.76580237842179*^9}, {
+   3.765802457193445*^9, 3.765802490100358*^9}, {3.765802705669777*^9, 
+   3.7658027516535177`*^9}, {3.765802823958047*^9, 3.765802875197056*^9}, 
+   3.765802910941915*^9, {3.765803043677308*^9, 3.765803116977131*^9}, {
+   3.765804346250577*^9, 
+   3.765804577819604*^9}},ExpressionUUID->"34cf60a3-4dcf-4287-a26d-\
 57c08fbc8045"]
 }, Open  ]]
 }, Open  ]]
@@ -7486,9 +7584,27 @@ Cell["Background and Theory", "Subsection",
   3.7656059996043158`*^9}},ExpressionUUID->"b5550e51-4c8e-4e54-907e-\
 19b49e51c71f"],
 
-Cell["Hi this is text", "Text",
- CellChangeTimes->{{3.765606010674778*^9, 
-  3.7656060136864767`*^9}},ExpressionUUID->"9e0e3766-fe26-40df-8512-\
+Cell["\<\
+Logical modelling is based on the idea that the system variables can take on \
+a discrete number of states/values and that the states can transition to each \
+other in a systematic way based on rules.  In the most frequently used \
+logical models, Boolean models, the variables can have 2 states, 0 or 1.  Im \
+most variants time is not represented as transition take place at each time \
+step, but these steps can be of different durations.  Logical models allow \
+for the dynamics of the system to be captured in a system level way, allowing \
+the investigation of where the system can reach from any given state after a \
+number of steps.  It allows observations to be made on the presence of \
+attractors, repulsers, oscillations ect. This requires the system to be able \
+to be described in a system of rules, which govern how each part of the \
+network reacts to the other parts of the network.  These can be complex, so \
+state transition tables are often used to determine what the state at the \
+next time step is for each possible state.  Once this is completed, a state \
+transition graph can be complete which shows clearly how the states are \
+transitioning in the network and any interesting features of the network.  \
+\>", "Text",
+ CellChangeTimes->{{3.765606010674778*^9, 3.7656060136864767`*^9}, {
+  3.765804710792083*^9, 3.7658050327787724`*^9}, {3.7658076429131203`*^9, 
+  3.765807732885976*^9}},ExpressionUUID->"9e0e3766-fe26-40df-8512-\
 6a243e977055"]
 }, Open  ]],
 
@@ -7500,7 +7616,7 @@ Cell["Results and Discussion", "Subsection",
 c8dfa5bd4c2b"],
 
 Cell[TextData[{
- "The bollean network was defined as:\n",
+ "The boolean network was defined as:\n",
  Cell[BoxData[
   GraphicsBox[
    TagBox[RasterBox[CompressedData["
@@ -7823,8 +7939,8 @@ such a simple system the  rules for the system can be defined as follows.\n\n",
 (X(t) AND Z(t))\n- Y(t+1) = 1 \tif \tX(t) AND Z(t)\n- Z(t+1) = 0 \tif \tNOT \
 Y(t)\n- Z(t+1) = 1 \tif \tY(t)\n\nFrom this a state transition table can be \
 constructed which takes into consideration all previous states and the \
-resulting states at the next time step.  This can written out as it is a \
-simple system, and can be seen in the following table.  \n\n",
+resulting states at the next time step.  This can written out manually as it \
+is a simple system, and can be seen in the following table.  \n\n",
  Cell[BoxData[GridBox[{
     {
      StyleBox[
@@ -7901,7 +8017,9 @@ seen in the following table."
    3.765624023989992*^9}, {3.765692543487393*^9, 3.765692556955699*^9}, {
    3.765693613330751*^9, 3.765693714466537*^9}, {3.765718510298485*^9, 
    3.765718527857441*^9}, {3.7657738434169483`*^9, 3.765773847525662*^9}, 
-   3.765775547801538*^9},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
+   3.765775547801538*^9, {3.76580552280991*^9, 3.7658055259036427`*^9}, {
+   3.765807759880766*^9, 
+   3.765807761152493*^9}},ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-\
 7244efb96539"],
 
 Cell[CellGroupData[{
@@ -8159,12 +8277,17 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell["\<\
-This is the state transition graph showing the states (X,Y,Z) and the next \
-time state from that state.\
+The two tables match each other and confirm that the state transition table \
+is accurate given the rules define above.  Once this was confirmed a state \
+transition graph could be constructed using mathematica.  This  state \
+transition graph showing the states (X,Y,Z) and the next time state from that \
+state.\
 \>", "Text",
  CellChangeTimes->{{3.765633330399358*^9, 3.765633343104928*^9}, {
-  3.765773861104116*^9, 
-  3.765773878554902*^9}},ExpressionUUID->"b58f93d5-4ade-405b-99f4-\
+   3.765773861104116*^9, 3.765773878554902*^9}, {3.765807770015807*^9, 
+   3.765807788479579*^9}, {3.7658089507500067`*^9, 3.765808987012429*^9}, {
+   3.765810442045268*^9, 3.765810444127783*^9}, 
+   3.76581060677569*^9},ExpressionUUID->"b58f93d5-4ade-405b-99f4-\
 687162f84265"],
 
 Cell[CellGroupData[{
@@ -8311,7 +8434,33 @@ L+O8Ucg77oM7f4agnia/8mHuEx8cMRaj3k8Pt0TfOjAFjWcL0M/Ge7XL1UNT
   3.765693232270795*^9, 3.765715316775584*^9, 3.765794862739506*^9},
  CellLabel->
   "Out[476]=",ExpressionUUID->"8a0983dd-d052-42a0-841e-c7d260f5a511"]
-}, Open  ]]
+}, Open  ]],
+
+Cell["\<\
+The state transition graph shows 2 separate systems given the conditions \
+present.  They do not connect to each other and therefor the system is \
+dependent on the starting conditions.  If the system starts in one of the \
+states in the top state transition graph, it will be attracted to the \
+attractor 100.  This is due to how Z inhibits the production of X, which in \
+turn stops more Y from being produced.  Since there is no X and Z present at \
+the same time outside of the state 111 no more Y can be produced, which leads \
+to state 000.  At this state point only X can be produced as without Z, Y \
+cannot be produced and without Y, Z cannot be produced.  X continuously \
+produces itself when no Z is present and therefor it stays in that state.
+
+In the second state transition graph, the system oscillates between 010 and \
+101, which is also an attractor for the only other state in this part of the \
+system 110.  This is because in that state Y can produce Z, and still make X \
+as there is no Z to inhibit.  It then causes makes the state 101 where Y is \
+produced and allows for both X and Z to be produced, which in turn can only \
+make Y, leading to the oscillation.  \
+\>", "Text",
+ CellChangeTimes->{{3.765809000040555*^9, 3.765809065588159*^9}, {
+  3.7658091479512577`*^9, 3.765809179170442*^9}, {3.765810055408536*^9, 
+  3.7658100669830847`*^9}, {3.765810103974221*^9, 3.765810402884137*^9}, {
+  3.765810436427826*^9, 
+  3.765810494036256*^9}},ExpressionUUID->"76e8b0dd-2650-495d-a1f6-\
+76268e3d8817"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -8382,62 +8531,63 @@ Cell[CellGroupData[{
 Cell[194656, 4076, 1956, 49, 164, "Code",ExpressionUUID->"f73734e7-02ca-4daa-b95b-82b79f7ae49f"],
 Cell[196615, 4127, 15603, 318, 314, "Output",ExpressionUUID->"c8170df6-ca12-4174-82c2-d53f27f19881"]
 }, Open  ]],
-Cell[212233, 4448, 3591, 56, 495, "Text",ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-b20485fe2036"],
-Cell[215827, 4506, 2537, 83, 142, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
+Cell[212233, 4448, 3580, 55, 495, "Text",ExpressionUUID->"0d86a3f2-b95c-4b1d-a068-b20485fe2036"],
+Cell[215816, 4505, 2537, 83, 142, "Text",ExpressionUUID->"ff10a64e-58e5-4702-ac10-43d5045477e6"],
 Cell[CellGroupData[{
-Cell[218389, 4593, 6713, 180, 802, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
-Cell[225105, 4775, 904, 13, 35, "Output",ExpressionUUID->"216e4037-3cdc-4d68-8f2f-0ff07d1ff7ef"],
-Cell[226012, 4790, 29374, 571, 316, "Output",ExpressionUUID->"cea61a23-6939-4ace-a801-50c9369434b3"],
-Cell[255389, 5363, 2967, 57, 404, "Output",ExpressionUUID->"daa6f5ca-9420-4742-8a47-257492c9d720"],
-Cell[258359, 5422, 2733, 53, 406, "Output",ExpressionUUID->"edace2b0-ec69-4ccf-a5f3-84b9ec81f5f6"]
+Cell[218378, 4592, 6713, 180, 802, "Code",ExpressionUUID->"08f879c7-8b85-4af3-b9cc-a542f4305626"],
+Cell[225094, 4774, 904, 13, 35, "Output",ExpressionUUID->"216e4037-3cdc-4d68-8f2f-0ff07d1ff7ef"],
+Cell[226001, 4789, 29374, 571, 316, "Output",ExpressionUUID->"cea61a23-6939-4ace-a801-50c9369434b3"],
+Cell[255378, 5362, 2967, 57, 404, "Output",ExpressionUUID->"daa6f5ca-9420-4742-8a47-257492c9d720"],
+Cell[258348, 5421, 2733, 53, 406, "Output",ExpressionUUID->"edace2b0-ec69-4ccf-a5f3-84b9ec81f5f6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[261129, 5480, 2460, 62, 164, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
-Cell[263592, 5544, 19684, 388, 316, "Output",ExpressionUUID->"a39a37f2-3590-49f9-bfd0-068edf3a1648"]
+Cell[261118, 5479, 2460, 62, 164, "Code",ExpressionUUID->"0b3f2182-6912-4aef-be33-3062682bcfae"],
+Cell[263581, 5543, 19684, 388, 316, "Output",ExpressionUUID->"a39a37f2-3590-49f9-bfd0-068edf3a1648"]
 }, Open  ]],
-Cell[283291, 5935, 2974, 47, 403, "Text",ExpressionUUID->"ff85ea71-31e9-4f9a-894d-cde0ed44e0cd"],
-Cell[286268, 5984, 521, 10, 58, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
+Cell[283280, 5934, 3000, 48, 403, "Text",ExpressionUUID->"ff85ea71-31e9-4f9a-894d-cde0ed44e0cd"],
+Cell[286283, 5984, 2421, 77, 143, "Text",ExpressionUUID->"54212451-1b7d-4331-a3e8-6735815350b3"],
 Cell[CellGroupData[{
-Cell[286814, 5998, 6129, 162, 714, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
+Cell[288729, 6065, 6129, 162, 714, "Code",ExpressionUUID->"b2c4ca15-6be7-48f2-8047-d21dd6a111a3",
  InitializationCell->True],
-Cell[292946, 6162, 40543, 756, 316, "Output",ExpressionUUID->"ab10e73d-b845-4274-9fd1-5183c7a7243c"],
-Cell[333492, 6920, 2620, 53, 408, "Output",ExpressionUUID->"8b9bde26-c117-4e98-beee-2839d160431e"],
-Cell[336115, 6975, 2406, 49, 424, "Output",ExpressionUUID->"e293ca2e-9793-4de7-9a76-edc8efbefa1c"]
+Cell[294861, 6229, 40543, 756, 316, "Output",ExpressionUUID->"ab10e73d-b845-4274-9fd1-5183c7a7243c"],
+Cell[335407, 6987, 2646, 53, 430, "Output",ExpressionUUID->"8b9bde26-c117-4e98-beee-2839d160431e"],
+Cell[338056, 7042, 2407, 49, 424, "Output",ExpressionUUID->"e293ca2e-9793-4de7-9a76-edc8efbefa1c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[338558, 7029, 2238, 59, 164, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
-Cell[340799, 7090, 15673, 322, 314, "Output",ExpressionUUID->"f40f9d80-fb40-429e-a4e2-4f0ccd196884"]
+Cell[340500, 7096, 2238, 59, 164, "Code",ExpressionUUID->"196ff1ba-6985-4266-9ac2-7cf4ece154b7"],
+Cell[342741, 7157, 15673, 322, 314, "Output",ExpressionUUID->"f40f9d80-fb40-429e-a4e2-4f0ccd196884"]
 }, Open  ]],
-Cell[356487, 7415, 1186, 28, 152, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
+Cell[358429, 7482, 2940, 59, 290, "Text",ExpressionUUID->"34cf60a3-4dcf-4287-a26d-57c08fbc8045"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[357734, 7450, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
+Cell[361430, 7548, 155, 3, 68, "Section",ExpressionUUID->"27e8feba-88d4-4f6e-ae71-3a21b6fb054e"],
 Cell[CellGroupData[{
-Cell[357914, 7457, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
-Cell[358088, 7462, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
+Cell[361610, 7555, 171, 3, 55, "Subsection",ExpressionUUID->"b5713fc3-5760-46c4-8de2-ace4cd740740"],
+Cell[361784, 7560, 159, 3, 35, "Text",ExpressionUUID->"a983e2c0-f394-4eca-9a4b-e5758976bec3"]
 }, Open  ]],
-Cell[358262, 7468, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[358471, 7476, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
-Cell[CellGroupData[{
-Cell[358653, 7483, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
-Cell[358827, 7488, 159, 3, 35, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
+Cell[361958, 7566, 172, 3, 55, "Subsection",ExpressionUUID->"14b3fb22-fe67-4120-8d54-78ac4903d9cc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[359023, 7496, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
-Cell[359198, 7501, 22300, 403, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[362167, 7574, 157, 3, 68, "Section",ExpressionUUID->"76322f4b-5a7d-4a2c-a74c-0fa6921d39c5"],
 Cell[CellGroupData[{
-Cell[381523, 7908, 7027, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
-Cell[388553, 8104, 1926, 53, 192, "Output",ExpressionUUID->"c97d0289-f281-4f5d-ae9a-52167f7da54b"]
+Cell[362349, 7581, 171, 3, 55, "Subsection",ExpressionUUID->"b5550e51-4c8e-4e54-907e-19b49e51c71f"],
+Cell[362523, 7586, 1483, 21, 242, "Text",ExpressionUUID->"9e0e3766-fe26-40df-8512-6a243e977055"]
 }, Open  ]],
-Cell[390494, 8160, 303, 7, 35, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
 Cell[CellGroupData[{
-Cell[390822, 8171, 968, 19, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
-Cell[391793, 8192, 4996, 120, 156, "Output",ExpressionUUID->"8a0983dd-d052-42a0-841e-c7d260f5a511"]
-}, Open  ]]
+Cell[364043, 7612, 172, 3, 55, "Subsection",ExpressionUUID->"73436ab2-aa3d-4772-8626-c8dfa5bd4c2b"],
+Cell[364218, 7617, 22410, 405, 946, "Text",ExpressionUUID->"422d634a-5f4d-4e6a-b7e6-7244efb96539"],
+Cell[CellGroupData[{
+Cell[386653, 8026, 7027, 194, 516, "Code",ExpressionUUID->"1ecf2f96-c63d-4f25-878a-cecfb1931c84"],
+Cell[393683, 8222, 1926, 53, 192, "Output",ExpressionUUID->"c97d0289-f281-4f5d-ae9a-52167f7da54b"]
+}, Open  ]],
+Cell[395624, 8278, 683, 12, 81, "Text",ExpressionUUID->"b58f93d5-4ade-405b-99f4-687162f84265"],
+Cell[CellGroupData[{
+Cell[396332, 8294, 968, 19, 76, "Code",ExpressionUUID->"91665103-2d31-4445-92f9-7443fe0d96ce"],
+Cell[397303, 8315, 4996, 120, 156, "Output",ExpressionUUID->"8a0983dd-d052-42a0-841e-c7d260f5a511"]
+}, Open  ]],
+Cell[402314, 8438, 1534, 24, 265, "Text",ExpressionUUID->"76e8b0dd-2650-495d-a1f6-76268e3d8817"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
